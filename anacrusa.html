@@ -1,0 +1,4674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="YiliLemon">
+    <meta name="keywords" content="Portfolio, portafolio, YiliLemon, yililemon, portafolio yililemon, Portafolio YiliLemon, Anacrusa, videojuego">
+    <meta name="description" content="Página dedicada a ANACRUSA, videojuego desarrollado por YiliLemon. Concepto, diseño, programación, narrativa y más.">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Anacrusa - Portfolio YiliLemon</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #212020;
+            --secondary-color: #5C5C5C;
+            --accent-color: #B09676;
+            --accent-dark: #2E2E2E;
+            --text-color: #D9B99E;
+            --text-secondary: #C4C4C4;
+            --card-bg: rgba(33, 32, 32, 0.8);
+            --section-padding: 80px 20px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        
+        section {
+            padding: var(--section-padding);
+            background-color: var(--primary-color);
+        }
+        
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Header y navegación */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+			background-color: var(--primary-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+      
+        }
+        
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 20px;
+           	margin-bottom: 15px;
+            margin-top: 15px;
+        }
+        
+        .nav-menu a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+         }
+
+		.back-button {
+		  font-size: 30px;
+		  text-decoration: none;
+		  color: var(--text-color);
+
+		  width: 36px;
+		  height: 36px;
+		  border-radius: 40%;
+
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+
+		  background: rgba(255, 255, 255, 0.15);
+		  backdrop-filter: blur(10px);
+		  border: 1px solid rgba(255, 255, 255, 0.35);
+
+		  margin-right: 16px;
+		  padding-bottom: 6px;
+
+		  transition: transform 0.3s ease, background 0.3s ease;
+		}
+
+		.back-button:hover {
+		  background: rgba(255, 255, 255, 0.25);
+		  transform: translateX(-3px);
+		}
+
+		        
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                       url(img/videogames/cabezoteanacrusa.jpg);
+            background-size: cover;
+            background-position: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 6rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #F2C9BD, #6E5C4C);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-color);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+        
+        /* Secciones de contenido */
+        .section-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .section-text {
+            padding-right: 20px;
+        }
+        
+        .section-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-media img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .media-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-secondary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .media-placeholder-concept {
+            width: 100%;
+            height: 300px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: -350px;
+            color: var(--text-secondary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .media-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+
+            /* Estilos para los botones de modal debajo de la imagen */
+    .modal-buttons-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 40px;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .modal-btn {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        border: none;
+        padding: 10px 16px;
+        border-radius: 20px;
+        font-family: 'Segoe UI', 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 3px 8px rgba(255, 201, 222, 0.2);
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+    }
+    
+    .modal-btn:hover {
+        background-color: var(--text-color);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(255, 201, 222, 0.3);
+    }
+    
+    .modal-btn i {
+        font-size: 1rem;
+    }
+    
+    /* Asegurar que la imagen y botones estén bien organizados */
+    .section-media {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .media-placeholder-concept {
+        max-width: 100%;
+        width: 500px;
+        height: 374px;
+        max-height: 100%;
+        margin-bottom: 0;
+        margin-top: -50px;
+    }
+    
+    .media-placeholder-concept img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Estilos para las ventanas modales */
+	    .modal {
+	        display: none;
+	        position: fixed;
+	        top: 0;
+	        left: 0;
+	        width: 100%;
+	        height: 100%;
+	        background-color: rgba(0, 0, 0, 0.85);
+	        z-index: 2000;
+	        justify-content: center;
+	        align-items: center;
+	        opacity: 0;
+	        transition: opacity 0.3s ease;
+	        padding: 20px;
+	    }
+	    
+	    .modal.active {
+	        display: flex;
+	        opacity: 1;
+	    }
+	    
+	    .modal-content {
+	        background-color: var(--primary-color);
+	        border-radius: 10px;
+	        width: 90%;
+	        max-width: 700px;
+	        max-height: 80vh;
+	        overflow-y: auto;
+	        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+	        border: 1px solid rgba(255, 201, 222, 0.2);
+	        animation: modalFadeIn 0.3s ease;
+	        position: relative;
+	        z-index: 2001;
+	    }
+	    
+	    @keyframes modalFadeIn {
+	        from {
+	            transform: translateY(-30px) scale(0.95);
+	            opacity: 0;
+	        }
+	        to {
+	            transform: translateY(0) scale(1);
+	            opacity: 1;
+	        }
+	    }
+	    
+	    .modal-header {
+	        display: flex;
+	        justify-content: space-between;
+	        align-items: center;
+	        padding: 18px 25px;
+	        border-bottom: 1px solid rgba(255, 201, 222, 0.2);
+	        background-color: rgba(33, 32, 32, 0.95);
+	        border-radius: 10px 10px 0 0;
+	        position: sticky;
+	        top: 0;
+	        z-index: 10;
+	        backdrop-filter: blur(10px);
+	    }
+	    
+	    .modal-header h3 {
+	        color: var(--accent-color);
+	        margin: 0;
+	        display: flex;
+	        align-items: center;
+	        gap: 10px;
+	        font-size: 1.3rem;
+	    }
+	    
+	    .modal-close {
+	        color: var(--text-secondary);
+	        font-size: 26px;
+	        font-weight: bold;
+	        cursor: pointer;
+	        width: 30px;
+	        height: 30px;
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        border-radius: 50%;
+	        transition: all 0.3s ease;
+	        line-height: 1;
+	    }
+	    
+	    .modal-close:hover {
+	        color: var(--accent-color);
+	        background-color: rgba(255, 201, 222, 0.1);
+	        transform: rotate(90deg);
+	    }
+	    
+	    .modal-body {
+	        padding: 25px;
+	        color: var(--text-secondary);
+	    }
+	    
+	    .modal-body h4 {
+	        color: var(--accent-color);
+	        margin-top: 18px;
+	        margin-bottom: 10px;
+	        font-size: 1.1rem;
+	        border-bottom: 1px solid rgba(255, 201, 222, 0.1);
+	        padding-bottom: 5px;
+	    }
+	    
+	    .modal-body ul {
+	        margin-left: 20px;
+	        margin-bottom: 20px;
+	    }
+	    
+	    .modal-body li {
+	        margin-bottom: 8px;
+	        line-height: 1.5;
+	    }
+	    
+	    .modal-body p {
+	        margin-bottom: 15px;
+	        line-height: 1.6;
+	    }
+	    
+	    .modal-highlight {
+	        background-color: rgba(255, 201, 222, 0.05);
+	        border-left: 4px solid var(--accent-color);
+	        padding: 15px 20px;
+	        margin: 20px 0;
+	        border-radius: 0 5px 5px 0;
+	    }
+	    
+	    .modal-highlight p {
+	        margin-bottom: 8px;
+	    }
+	    
+	    /* Grid para moodboard */
+	    .moodboard-grid {
+	        display: grid;
+	        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	        gap: 15px;
+	        margin: 20px 0;
+	    }
+	    
+	    .moodboard-item {
+	        text-align: center;
+	    }
+	    
+	    .moodboard-img {
+	        width: 100%;
+	        height: 70px;
+	        border-radius: 8px;
+	        margin-bottom: 10px;
+	        border: 2px solid rgba(255, 255, 255, 0.1);
+	    }
+	    
+	    .moodboard-item p {
+	        font-size: 0.85rem;
+	        margin: 0;
+	        color: var(--text-color);
+	    }
+	    
+	    .moodboard-refs {
+	        background-color: rgba(89, 89, 89, 0.1);
+	        padding: 15px;
+	        border-radius: 8px;
+	        margin: 20px 0;
+	        border: 1px solid rgba(255, 255, 255, 0.05);
+	    }
+	    
+	    .moodboard-examples ul {
+	        columns: 2;
+	        column-gap: 30px;
+	    }
+	    
+	    /* Responsive */
+	    @media (max-width: 768px) {
+	        .modal-buttons-container {
+	            flex-direction: row;
+	            gap: 8px;
+	        }
+	        
+	        .modal-btn {
+	            min-width: 100px;
+	            padding: 8px 12px;
+	            font-size: 0.85rem;
+	        }
+	        
+	        .modal-content {
+	            width: 95%;
+	            max-height: 85vh;
+	        }
+	        
+	        .moodboard-grid {
+	            grid-template-columns: repeat(2, 1fr);
+	        }
+	        
+	        .moodboard-examples ul {
+	            columns: 1;
+	        }
+	        
+	        .section-content {
+	            gap: 30px;
+	        }
+	    }
+	    
+	    @media (max-width: 480px) {
+	        .modal-buttons-container {
+	            flex-direction: column;
+	        }
+	        
+	        .modal-btn {
+	            width: 100%;
+	            min-width: unset;
+	        }
+	        
+	        .moodboard-grid {
+	            grid-template-columns: 1fr;
+	        }
+	        
+	        .modal-header {
+	            padding: 15px 20px;
+	        }
+	        
+	        .modal-body {
+	            padding: 20px;
+	        }
+	    }
+
+		.materials-grid {
+		    display: grid;
+		    grid-template-columns: repeat(2, minmax(0, 200px));
+		    gap: 16px;
+		    justify-content: center;
+		    margin-top: 20px;
+		    margin-bottom: 20px;
+		}
+
+
+		.img-modal-materials {
+		    width: 100%;
+		    height: auto;
+		    border-radius: 8px;
+		}
+
+
+		@media (max-width: 768px) {
+		    .materials-grid {
+		        grid-template-columns: 1fr;
+		    }
+		}
+
+        /* Diseño alternado para secciones */
+        section:nth-child(even) {
+            background-color: var(--secondary-color);
+        }
+        
+        section:nth-child(even) .section-content {
+            direction: rtl;
+        }
+        
+        section:nth-child(even) .section-text {
+            padding-right: 0;
+            padding-left: 20px;
+            direction: ltr;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #212020;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 15px 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .section-text {
+                padding-right: 0;
+            }
+            
+            section:nth-child(even) .section-content,
+            section:nth-child(even) .section-text {
+                direction: ltr;
+                padding-left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background-color: var(--primary-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .hero {
+                padding-top: 70px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            section {
+                padding: 60px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+	<!--============= HEADER CON MENÚ DE NAVEGACIÓN ==============-->
+	    <header>
+	        <nav class="container">
+
+	        	    <!-- BOTÓN VOLVER -->
+			    <a href="videogames.html" class="back-button" aria-label="Volver a videojuegos">←</a>
+			            
+	            <div class="menu-toggle" id="mobile-menu">
+	                <i class="fas fa-bars"></i>
+	            </div>
+	            
+	            <ul class="nav-menu" id="nav-menu">
+	                <li><a href="#concepto">Concepto</a></li>
+	                <li><a href="#diseno">Diseño de juego</a></li>
+	                <li><a href="#programacion">Programación</a></li>
+	                <li><a href="#narrativa">Narrativa</a></li>
+	                <li><a href="#artistica">Dirección artística</a></li>
+	                <li><a href="#ilustracion">Ilustración</a></li>
+	                <li><a href="#ui">UI / UX</a></li>
+	                <li><a href="#pruebas">Iteración y pruebas</a></li>
+	            </ul>
+	        </nav>
+
+	    </header>
+
+    <!--============= SECCIÓN HERO ===============-->
+	    <section class="hero">
+	        <div class="hero-content">
+	            <h1>ANACRUSA</h1>
+	            <p>Un videojuego 2D de plataformas narrativo que explora la fragilidad de la existencia a través del ritmo y puzzles.</p>
+	            <a href="#concepto" class="cta-button">Descubre el proyecto</a>
+	        </div>
+	    </section>
+
+  <!--===========Sección: Concepto y visión del proyecto=============-->
+
+	<section id="concepto">
+	    <div class="container">
+	        <h2>Concepto y visión del proyecto</h2>
+	        <div class="section-content">
+	            <div class="section-text">
+	                <h3>Idea Inicial</h3>
+	                <p>Anacrusa nació como un proyecto universitario enfocado en el aprendizaje de programación orientada a objetos. Con el tiempo, el desarrollo trascendió el marco académico y se transformó en un proyecto personal de exploración creativa.</p>
+
+	                <p>El punto de partida conceptual fue el diseño de Sol, a partir del cual surgió la idea de una nota musical consciente que debe desplazarse y persistir dentro de un mundo fragmentado. Desde esta imagen inicial se construyó la narrativa y la lógica del juego: avanzar, interpretar y mantenerse en existencia a través del movimiento.</p>
+
+	                <h3>Tema central</h3>
+	                <p>El proyecto explora la existencia como un fenómeno temporal y dependiente de la interpretación, utilizando la música como metáfora de la vida y el movimiento como condición de permanencia.</p>
+
+	                <h3>Intención emocional y conceptual</h3>
+	                <p>La intención del proyecto es generar una experiencia de aventura reflexiva, combinando exploración, diálogos con NPCs, resolución de acertijos y enfrentamientos con entidades del mundo. Estas dinámicas buscan construir una sensación de viaje y descubrimiento, donde el jugador no solo supera obstáculos, sino que interpreta activamente el significado del entorno y su relación con Sol</p>
+	            </div>
+	            <div class="section-media">
+	                <div class="media-placeholder-concept">
+	                    <img src="img/videogames/concept1.gif" alt="Animación de concepto">
+	                </div>
+                
+                   <!--============= BOTONES MODALES ===============-->
+                <div class="modal-buttons-container">
+                    <button class="modal-btn" data-modal="modal-referencias">
+                        <i class="fas fa-book"></i> Referencias
+                    </button>
+                    <button class="modal-btn" data-modal="modal-materiales">
+                        <i class="fas fa-palette"></i> Materiales
+                    </button>
+                </div>
+            	</div>
+        </div>
+    	</div>
+
+   	<!--============= VENTANAS MODALES ===============-->
+
+			<div id="modal-referencias" class="modal">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <h3><i class="fas fa-book"></i> Referencias</h3>
+			            <span class="modal-close">&times;</span>
+			        </div>
+			        <div class="modal-body">
+			            <h4>Artísticas</h4>
+			            <ul>
+			                <li>Hollow Knight: Skilsong - Diseño de mundos 2D por capas</li>
+			                <li>Journey - Narrativa ambiental y minimalismo</li>
+			            </ul>
+			            
+			            <h4>Narrativas</h4>
+			            <ul>
+			                <li>Mitología griega - Sísifo y el eterno retorno</li>
+			                <li>Filosofía existencialista</li>
+			                <li>Cuentos de Borges - Laberintos y realidades alternas</li>
+			            </ul>
+			            
+			            <h4>Mecánicas</h4>
+			            <ul>
+			                <li>Celeste - Desafío progresivo</li>
+			                <li>Crash Bandicoot - Plataformas fluidas</li>
+			            </ul>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="modal-materiales" class="modal">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <h3><i class="fas fa-palette"></i> Materiales</h3>
+			            <span class="modal-close">&times;</span>
+			        </div>
+			        <div class="modal-body">
+			            <h4>Visión Inicial</h4>
+
+			            <p>El diseño de Sol surgió a partir de una forma geométrica simple: un cuerpo romboidal, un único ojo y extremidades mínimas. A este núcleo abstracto se le añadió un pequeño sombrero de copa, introduciendo desde el inicio una sensación de identidad.</p> 
+
+			            <div class="materials-grid">
+			                <img src="img/videogames/img1ana.jpg" class="img-modal-materials">
+			                <img src="img/videogames/img2ana.jpg" class="img-modal-materials">
+			                <img src="img/videogames/img3ana.jpg" class="img-modal-materials">
+			                <img src="img/videogames/img4aana.jpg" class="img-modal-materials">
+			            </div>
+
+			            <p> La simplicidad del personaje permitió que Sol funcionara como una figura simbólica más que realista, facilitando su lectura como una entidad musical y narrativa. Su diseño fue concebido para ser fácilmente reconocible, expresivo y adaptable a distintas situaciones dentro del juego.</p>
+			            
+			            <div class="modal-highlight">
+			                <p><strong>Género:</strong> Aventura, Puzzles, Plataformas</p>
+			                <p><strong>Estilo visual:</strong> 2D ilustrado con animación tradicional</p>
+			                <p><strong>Plataforma:</strong> PC (Windows/Mac/Linux)</p>
+			                <p><strong>Duración estimada:</strong> 2-4 horas</p>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="modal-moodboard" class="modal">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <h3><i class="fas fa-images"></i> Moodboard Visual</h3>
+			            <span class="modal-close">&times;</span>
+			        </div>
+			        <div class="modal-body">
+			            <div class="moodboard-grid">
+			                <div class="moodboard-item">
+			                    <div class="moodboard-img" style="background-color: #0F0F0F;"></div>
+			                    <p>Negro profundo</p>
+			                </div>
+			                <div class="moodboard-item">
+			                    <div class="moodboard-img" style="background-color: #2B2B2B;"></div>
+			                    <p>Gris oscuro</p>
+			                </div>
+			                <div class="moodboard-item">
+			                    <div class="moodboard-img" style="background-color: #6A6A6A;"></div>
+			                    <p>Gris medio</p>
+			                </div>
+			                <div class="moodboard-item">
+			                    <div class="moodboard-img" style="background-color: #B3B3B3;"></div>
+			                    <p>Gris Claro</p>
+			                </div>
+			            </div>
+			            
+			            <p>La paleta es monocromática, basada en negros profundos, grises medios y blancos desaturados.</p>
+			            <ul>
+			            <li>El negro domina la vegetación inferior y los bordes, generando peso visual.</li>
+						<li>Los grises claros se reservan para el fondo, creando distancia y repetición.</li>
+						<li>El plano jugable mantiene un contraste controlado para asegurar lectura mecánica.</li>
+					</ul>
+			            <h4>Referencias visuales</h4>
+			            <div class="moodboard-refs">
+			                <p>Para el estilo visual de Anacrusa, utilice referentes basados en Ilustración tradicional en blanco y negro y Estética de libros ilustrados oscuros</p>
+
+			               		<div class="gallery-item">
+                        <div class="gallery-media">
+                             <img src="img/videogames/ref1.jpg">
+                        </div>
+                        
+                    </div>
+			  	   </div>
+			            
+			            <div class="moodboard-examples">
+			                <h4>Decisiones estéticas clave</h4>
+			                <ul>
+			                    <li>Uso de fondos verticales repetitivos para transmitir profundidad y desorientación.</li>
+			                    <li>Vegetación y formas orgánicas densas que refuerzan la sensación de abandono.</li>
+			                    <li>Separación clara entre fondo y plano jugable para no comprometer la lectura del gameplay.</li>
+			                    <li>Estilo dibujado que evita superficies limpias, comunicando desgaste y corrupción.</li>
+			                </ul>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+
+	</section>
+
+ <!-- ==============Sección: Diseño de juego (Game Design)================= -->
+    <section id="diseno">
+    <div class="container">
+        <h2>Diseño de juego (Game Design)</h2>
+        <div class="section-content">
+            <div class="section-text">
+                <h3>Mecánicas principales</h3>
+                <p>El juego se centra en plataformas 2D de precisión, combinadas con combates contra enemigos que requieren múltiples impactos para ser derrotados y que se mejoran conforme el jugador lo hace. Una habilidad adicional expande las opciones de movimiento y exploración a lo largo del progreso del jugador.</p>
+
+                <h3>Objetivo de jugador</h3>
+                <p>El objetivo del jugador es acompañar a Sol en la búsqueda de los pájaros, una figura legendaria cuya existencia es incierta dentro del mundo del juego.</p>
+
+                <p>Para avanzar, Sol debe explorar el entorno y reunir tres fichas antiguas que permiten abrir la puerta hacia el lugar donde se cree que habitan estos seres. La búsqueda funciona tanto como una meta narrativa como una estructura de progresión dentro del juego.</p>
+
+                <h3>Reglas del mundo</h3>
+                <p>En el universo de Anacrusa, las notas musicales han sido corrompidas por el silencio. La ausencia de sonido ha fragmentado el mundo y debilitado a sus habitantes, volviendo la música una condición esencial para la existencia.</p>
+
+                <p>Sol, como entidad musical, depende del sonido para persistir, por lo que encontrar fuentes sonoras y a los seres que aún pueden cantar se vuelve un elemento crucial de su supervivencia.</p>
+
+                <h3>Ritmo y progresión</h3>
+                <p>A lo largo del recorrido, Sol se encuentra con distintos personajes que reaccionan de forma ambigua a su búsqueda, alternando entre el desaliento y el apoyo. Estas interacciones refuerzan el tono reflexivo del viaje.</p>
+
+                <p>A nivel de diseño, la progresión se construye mediante escenarios cada vez más complejos: los laberintos incrementan su dificultad y los acertijos, aunque escasos al inicio, adquieren mayor protagonismo hacia las etapas finales del juego.</p>
+
+                <h3>Decisiones de diseño importantes</h3>
+                <p>El mundo de Anacrusa está construido principalmente en blanco y negro, reservando el color únicamente para zonas específicas de la tierra baja. Esta decisión busca enfatizar la ausencia de vida y sonido en el entorno, haciendo que el color funcione como un elemento narrativo más que decorativo.</p>
+
+                <p>Los fondos representan espacios desolados o en ruinas, reforzados por una ambientación sonora mínima donde predomina el silencio. De este modo, los únicos sonidos presentes durante el recorrido son aquellos generados por Sol, subrayando su papel como fuente activa de ritmo y existencia dentro del mundo.</p>
+            </div>
+            <div class="section-media">
+                <div class="media-gallery">
+                    <!-- Imagen 1: Diagrama de mecánicas -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/plataformas.gif" alt="SaltitosGif">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Saltos</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Mecánicas principales</h4>
+                            <p>El desplazamiento y el salto funcionan como base del juego, exigiendo precisión y lectura del espacio para avanzar y sobrevivir en el entorno.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 2: Niveles y progresión -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/laberinto.gif" alt="Estructura de niveles">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Estructura de niveles</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Progresión de niveles</h4>
+                            <p>Los escenarios evolucionan gradualmente en complejidad, incorporando laberintos más densos y acertijos que refuerzan la sensación de exploración y pérdida.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 3: Sistema de combate -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/enemigos.gif" alt="timing">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Timing</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Sistema de combate</h4>
+                            <p>El combate se integra al ritmo del juego mediante enemigos que requieren múltiples impactos, obligando al jugador a gestionar el espacio y el timing durante el enfrentamiento.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 4: Mapa del mundo -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/imgvs.jpg" alt="MundoAnacrusa">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Mapa del mundo</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>World design</h4>
+                            <p>El contraste entre blanco y negro y las zonas con color funciona como un recurso narrativo, señalando espacios donde el sonido y la vida aún persisten.</p>
+                        </div>
+                    </div>
+                </div>
+            	</div>
+        </div>
+    	</div>
+	
+			<style>
+		    /* Estilos para la galería de imágenes en columna */
+		    .media-gallery {
+		        display: flex;
+		        flex-direction: column;
+		        gap: 25px;
+		        width: 100%;
+		    }
+		    
+		    .gallery-item {
+		        background-color: rgba(33, 32, 32, 0.9);
+		        border-radius: 10px;
+		        overflow: hidden;
+		        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+		        border: 1px solid rgba(255, 201, 222, 0.1);
+		        transition: transform 0.3s ease, box-shadow 0.3s ease;
+		    }
+		    
+		    .gallery-item:hover {
+		        transform: translateY(-5px);
+		        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+		        border-color: rgba(255, 201, 222, 0.3);
+		    }
+		    
+		    .gallery-media {
+		        position: relative;
+		        width: 100%;
+		        height: 180px;
+		        overflow: hidden;
+		    }
+		    
+		    .gallery-media img {
+		        width: 100%;
+		        height: 100%;
+		        object-fit: cover;
+		        display: block;
+		        transition: transform 0.5s ease;
+		    }
+		    
+		    .gallery-item:hover .gallery-media img {
+		        transform: scale(1.05);
+		    }
+		    
+		    .gallery-overlay {
+		        position: absolute;
+		        bottom: 0;
+		        left: 0;
+		        right: 0;
+		        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+		        padding: 15px;
+		        opacity: 0;
+		        transform: translateY(10px);
+		        transition: all 0.3s ease;
+		    }
+		    
+		    .gallery-item:hover .gallery-overlay {
+		        opacity: 1;
+		        transform: translateY(0);
+		    }
+		    
+		    .gallery-caption {
+		        color: var(--accent-color);
+		        font-weight: 600;
+		        margin: 0;
+		        font-size: 0.9rem;
+		        text-align: center;
+		    }
+		    
+		    .gallery-info {
+		        padding: 18px;
+		    }
+		    
+		    .gallery-info h4 {
+		        color: var(--accent-color);
+		        margin-top: 0;
+		        margin-bottom: 8px;
+		        font-size: 1.1rem;
+		        border-bottom: 1px solid rgba(255, 201, 222, 0.2);
+		        padding-bottom: 5px;
+		    }
+		    
+		    .gallery-info p {
+		        color: var(--text-secondary);
+		        font-size: 0.9rem;
+		        line-height: 1.5;
+		        margin: 0;
+		    }
+		    
+		    /* Indicador visual para imágenes placeholder */
+		    .gallery-media:empty::before {
+		        content: "Imagen ilustrativa";
+		        position: absolute;
+		        top: 50%;
+		        left: 50%;
+		        transform: translate(-50%, -50%);
+		        color: var(--text-secondary);
+		        font-style: italic;
+		        z-index: 1;
+		    }
+		    
+		    /* Estilos para cuando no hay imágenes cargadas */
+		    .gallery-media:empty {
+		        background-color: var(--secondary-color);
+		        display: flex;
+		        align-items: center;
+		        justify-content: center;
+		    }
+		    
+		    /* Responsive para la galería */
+		    @media (max-width: 992px) {
+		        .section-content {
+		            grid-template-columns: 1fr;
+		        }
+		        
+		        .media-gallery {
+		            margin-top: 30px;
+		            flex-direction: row;
+		            flex-wrap: wrap;
+		            justify-content: space-between;
+		        }
+		        
+		        .gallery-item {
+		            width: calc(50% - 15px);
+		            margin-bottom: 20px;
+		        }
+		        
+		        .gallery-media {
+		            height: 150px;
+		        }
+		    }
+		    
+		    @media (max-width: 768px) {
+		        .gallery-item {
+		            width: 100%;
+		        }
+		        
+		        .gallery-media {
+		            height: 180px;
+		        }
+		    }
+		    
+		    @media (max-width: 480px) {
+		        .gallery-media {
+		            height: 150px;
+		        }
+		        
+		        .gallery-info {
+		            padding: 15px;
+		        }
+		    }
+		</style>
+	</section>
+
+<!-- Sección: Programación y lógica -->
+<section id="programacion">
+    <div class="container">
+        <h2>Programación y lógica</h2>
+        <div class="programacion-content">
+            <!-- Primera fila: Texto e imagen al lado -->
+            <div class="programacion-row">
+                <div class="programacion-text">
+                    <h3>Motor y tecnologías</h3>
+                    <p>La programación de Anacrusa se desarrolló en Unity utilizando C# y un enfoque basado en programación orientada a objetos. El objetivo principal fue construir una estructura modular que facilitara la expansión del proyecto y el manejo independiente de sistemas como movimiento, cámara, interacción y UI.</p>
+               
+                    <h3>Sistemas Implementados</h3>
+                    <p>El proyecto se organiza en distintos sistemas independientes que controlan el comportamiento del personaje, la cámara, la interacción con el entorno, los eventos del mundo y la interfaz de usuario.</p> 
+
+                    <p>El sistema de movimiento gestiona el desplazamiento y los saltos del personaje, mientras que el manejo de estados permite controlar transiciones entre acciones como reposo, movimiento y combate. La interacción con objetos y eventos se implementó de forma desacoplada, permitiendo reutilizar comportamientos en distintos elementos del mundo.</p>
+                </div>
+                <div class="programacion-media">
+                    <div class="programacion-image">
+                        <img src="img/videogames/code1.png" alt="Código del sistema de tiempo">
+                        <div class="image-caption">
+                            <p>El Animator funciona como una capa reactiva a la lógica del personaje, utilizando parámetros y triggers para traducir estados internos en feedback visual inmediato.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Segunda fila: Organización del proyecto -->
+            <div class="programacion-full">
+                <h3>Organización del proyecto</h3>
+                <p>La estructura del proyecto se organizó por carpetas según su función, separando los scripts del personaje, cámara, eventos, menús, UI, objetos interactivos, trampas y secuencias de inicio y cierre. Esta organización permitió mantener el código legible y escalable, facilitando la localización de sistemas específicos y la iteración durante el desarrollo.</p>
+                
+                <!-- Diagrama de estructura de scripts -->
+                <div class="diagram-container">
+                    <div class="diagram-header">
+                        <h4><i class="fas fa-folder-tree"></i> Estructura de Scripts</h4>
+                        <div class="diagram-toggle">
+                            <button class="toggle-btn active" data-diagram="detailed">Detallado</button>
+                            <button class="toggle-btn" data-diagram="simplified">Arquitectura del sistema</button>
+                        </div>
+                    </div>
+                    
+                    <div class="diagram-content">
+                        <!-- Versión detallada (visible por defecto) -->
+                        <div id="diagram-detailed" class="diagram-version active">
+                            <pre class="code-tree">
+Scripts/
+├── Character/
+│   ├── Character2D
+│   ├── Character
+│   ├── CheckPoint
+│   ├── OneHitKill
+│   ├── PlayerHealth
+│   ├── PlayerInventory
+│   ├── PlayerSpawnManager
+│   ├── HeartPickup
+│   ├── PlatformFollower
+│   ├── MovingPlatform
+│   ├── ShootingPowerUp
+│   ├── Bullet
+│   ├── PlatformPlayerDetector
+│   ├── Enemy
+│   ├── StaticEnemy
+│   ├── EnemyProyectile
+│   ├── EnemyShooter
+│   ├── Entity
+├── NPC
+│   ├── Dialogue
+│   ├── DialogueManager
+│   ├── DialogueTrigger
+├── Camera/
+│   ├── Camera Switcher
+│   ├── CameraZoomController
+│   ├── CameraZoomInTrigger
+│   ├── CameraZoomOutTrigger
+├── Events/
+│   ├── ProximityEvent
+│   ├── MusicalBoxAudio
+│   ├── ForcedDialogueSequence
+│   ├── AnimationEvent
+│   ├── AnimationSoundRelay
+│   ├── Sound Manager
+├── UI/
+│   ├── CollectibleObject
+│   ├── FloatingEffect
+│   ├── HorizontalPlatform
+│   ├── MessageDisplayManager
+│   ├── ShowMessageOnDestroy
+│   ├── UnlokeZoneTrigger
+├── Objects/
+│   ├── FloatingMessage
+│   ├── PlaySoundOnDestroy
+│   ├── ShowMessageOnTrigger
+├── Trampas/
+│   ├── TimedActivator
+│   ├── TimedActivatorTrigger
+│   ├── RotatingSaw
+├── Menus/
+│   ├── DropDownMenuUI
+├── StartandEnd/
+│   ├── EndGameTrigger
+│   ├── MainMenuUI
+│   ├── PlayerEndSequence
+│   ├── ScreenFader
+└── Base/
+    └── CustomBehavior</pre>
+                        </div>
+                        
+                        <!-- Versión resumida (oculta por defecto) -->
+                        <div id="diagram-simplified" class="diagram-version">
+                            <pre class="code-tree">
+Scripts/
+├── Base/ Contiene la clase base común desde la cual heredan los distintos comportamientos del juego, centralizando el ciclo de vida de los scripts y asegurando coherencia entre sistemas.
+│   └── CustomBehavior
+│
+├── Character/ Agrupa los sistemas principales del personaje, separando su núcleo lógico, el movimiento y plataformas, el combate y la salud, la gestión de inventario y habilidades, y el comportamiento de los enemigos. Esta división permitió trabajar cada aspecto de forma modular. 
+│   ├── Core (Character, Entity, Character2D)
+│   ├── Movement & Platforms
+│   ├── Combat & Health
+│   ├── Inventory & PowerUps
+│   └── Enemies
+│
+├── NPC/ Sistema dedicado a la gestión de diálogos e interacciones narrativas, permitiendo integrar conversaciones y secuencias sin acoplarlas directamente al comportamiento del jugador.
+│   └── Dialogue System
+│
+├── Camera/ Controla el comportamiento de la cámara mediante sistemas de zoom, transiciones y disparadores contextuales, adaptándose a las necesidades narrativas y jugables de cada sección del mundo.
+│   └── Camera Control & Triggers
+│
+├── Events/ Maneja eventos del mundo relacionados con audio, animaciones y activadores por proximidad, facilitando la construcción de momentos narrativos y ambientales dentro del juego.
+│   └── Audio & World Events
+│
+├── UI/ Sistema encargado de mostrar información y retroalimentación al jugador, incluyendo mensajes, indicadores y elementos visuales que acompañan la experiencia sin interrumpir el flujo del juego.
+│   └── Feedback & Messages
+│
+├── Objects/ Contiene scripts para objetos interactivos del entorno, permitiendo reutilizar comportamientos comunes como activadores, mensajes o reproducción de sonido.
+│   └── Interactive Objects
+│
+├── Trampas/ Agrupa los sistemas de peligros ambientales y trampas, diseñados como elementos independientes que interactúan con el jugador y refuerzan el desafío del recorrido.
+│   └── Environmental Hazards
+│
+├── Menus/ Gestiona la interfaz de menús del juego, separando la navegación y configuración del resto de los sistemas jugables.
+│   └── UI Menus
+│
+└── StartAndEnd/ Controla el flujo general del juego, incluyendo la secuencia de inicio, transiciones y cierre, asegurando una experiencia estructurada de principio a fin.
+    └── Game Flow</pre>
+                        </div>
+                    </div>
+                    
+                    <div class="diagram-info">
+                        <h5><i class="fas fa-sitemap"></i> Organización de scripts y arquitectura</h5>
+                        <p>El proyecto se estructuró en carpetas según la función de cada sistema, priorizando la separación de responsabilidades y la escalabilidad del código.</p>
+                        <p>Todos los comportamientos comparten una clase base común, lo que permitió centralizar el ciclo de vida de los scripts y mantener coherencia entre sistemas. A partir de esta base, se desarrollaron módulos independientes para el personaje, enemigos, cámara, eventos, UI y flujo general del juego.</p>
+                        <p>Esta organización facilitó la iteración durante el desarrollo y permitió modificar o extender sistemas específicos sin afectar el resto del proyecto. El sistema del personaje se desarrolló de forma modular, separando movimiento, estados, salud, inventario y habilidades. Esto permitió ajustar mecánicas específicas sin comprometer el comportamiento general del personaje.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Sección de diagramas del personaje -->
+<div class="diagram-container character-diagram">
+    <div class="diagram-header">
+        <h4><i class="fas fa-user"></i> Sistemas del Personaje Jugable</h4>
+        <div class="diagram-toggle">
+            <button class="toggle-btn active" data-diagram="movimiento">Movimiento</button>
+            <button class="toggle-btn" data-diagram="ataque">Ataque</button>
+            <button class="toggle-btn" data-diagram="respawn">Respawn</button>
+            <button class="toggle-btn" data-diagram="animaciones">Animaciones</button>
+        </div>
+    </div>
+    
+    <div class="diagram-description">
+        <p>Para estructurar la programación del personaje principal, se desarrollaron distintos sistemas interconectados que controlan movimiento, combate, animación y gestión de estados.</p>
+        <p>Los siguientes diagramas representan el flujo lógico y las decisiones clave detrás de estos sistemas, mostrando cómo la lógica del juego se traduce en comportamiento y feedback visual para el jugador.</p>
+    </div>
+
+    <!-- Encabezado para plegar/desplegar con flecha -->
+    <div class="collapse-header">
+        <h5>
+            <button class="collapse-toggle" aria-expanded="false">
+                <i class="fas fa-chevron-right collapse-icon"></i>
+                Diagramas detallados del personaje
+            </button>
+        </h5>
+    </div>
+
+    <!-- Contenedor de diagramas que se puede plegar/desplegar -->
+    <div class="collapsible-diagrams" style="display: none;">
+        <div class="diagram-content">
+        <!-- Diagrama de Movimiento -->
+        <div id="diagram-movimiento" class="diagram-version active">
+            <div class="flowchart">
+                <div class="flowchart-title">Flujo de Movimiento del Personaje</div>
+                <div class="flowchart-content">
+                    <div class="flowchart-node start">Inicio</div>
+                    <div class="flowchart-arrow">↓</div>
+                    <div class="flowchart-node">Leer input horizontal</div>
+                    <div class="flowchart-arrow">↓</div>
+                    <div class="flowchart-decision">
+                        <div class="decision-text">¿Puede moverse?</div>
+                        <div class="decision-branches">
+                            <div class="branch">
+                                <div class="branch-label">No</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Detener movimiento</div>
+                            </div>
+                            <div class="branch">
+                                <div class="branch-label">Sí</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Aplicar velocidad al Rigidbody</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-decision">
+                                    <div class="decision-text">¿Quiere saltar?</div>
+                                    <div class="decision-branches">
+                                        <div class="branch">
+                                            <div class="branch-label">Sí</div>
+                                            <div class="flowchart-arrow">↓</div>
+                                            <div class="flowchart-node">Aplicar fuerza de salto</div>
+                                            <div class="flowchart-arrow">↓</div>
+                                            <div class="flowchart-node action">Activar animación Jump</div>
+                                        </div>
+                                        <div class="branch">
+                                            <div class="branch-label">No</div>
+                                            <div class="flowchart-node">Continuar movimiento</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Diagrama de Ataque -->
+        <div id="diagram-ataque" class="diagram-version">
+            <div class="flowchart">
+                <div class="flowchart-title">Flujo de Sistema de Ataque</div>
+                <div class="flowchart-content">
+                    <div class="flowchart-node start">Input de ataque</div>
+                    <div class="flowchart-arrow">↓</div>
+                    <div class="flowchart-decision">
+                        <div class="decision-text">¿Está atacando?</div>
+                        <div class="decision-branches">
+                            <div class="branch">
+                                <div class="branch-label">Sí</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Ignorar nuevo input</div>
+                            </div>
+                            <div class="branch">
+                                <div class="branch-label">No</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Activar animación Attack</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Esperar timing de ataque</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Detectar enemigos en rango</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-decision">
+                                    <div class="decision-text">¿Enemigo detectado?</div>
+                                    <div class="decision-branches">
+                                        <div class="branch">
+                                            <div class="branch-label">Sí</div>
+                                            <div class="flowchart-arrow">↓</div>
+                                            <div class="flowchart-node action">Aplicar daño / fuerza</div>
+                                        </div>
+                                        <div class="branch">
+                                            <div class="branch-label">No</div>
+                                            <div class="flowchart-node">Ataque al aire</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Iniciar cooldown</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Diagrama de Respawn -->
+        <div id="diagram-respawn" class="diagram-version">
+            <div class="flowchart">
+                <div class="flowchart-title">Sistema de Respawn y Caída</div>
+                <div class="flowchart-content">
+                    <div class="flowchart-node start">Actualizar posición Y</div>
+                    <div class="flowchart-arrow">↓</div>
+                    <div class="flowchart-decision">
+                        <div class="decision-text">¿Debajo del umbral?</div>
+                        <div class="decision-branches">
+                            <div class="branch">
+                                <div class="branch-label">Sí</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node warning">Bloquear movimiento</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-node">Activar animación Fall</div>
+                                <div class="flowchart-arrow">↓</div>
+                                <div class="flowchart-decision">
+                                    <div class="decision-text">¿Hay checkpoint activo?</div>
+                                    <div class="decision-branches">
+                                        <div class="branch">
+                                            <div class="branch-label">Sí</div>
+                                            <div class="flowchart-arrow">↓</div>
+                                            <div class="flowchart-node action">Respawn en checkpoint</div>
+                                        </div>
+                                        <div class="branch">
+                                            <div class="branch-label">No</div>
+                                            <div class="flowchart-arrow">↓</div>
+                                            <div class="flowchart-node warning">Reiniciar escena</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="branch">
+                                <div class="branch-label">No</div>
+                                <div class="flowchart-node">Continuar normalmente</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Diagrama de Animaciones -->
+        <div id="diagram-animaciones" class="diagram-version">
+            <div class="flowchart">
+                <div class="flowchart-title">Sistema de Parámetros de Animación</div>
+                <div class="flowchart-grid">
+                    <div class="anim-parameter">
+                        <div class="param-name">Movimiento</div>
+                        <div class="param-value">Speed (float)</div>
+                        <div class="param-description">Controla la velocidad de animación de caminar/correr</div>
+                    </div>
+                    <div class="anim-parameter">
+                        <div class="param-name">Suelo</div>
+                        <div class="param-value">IsGrounded (bool)</div>
+                        <div class="param-description">Indica si el personaje está en contacto con el suelo</div>
+                    </div>
+                    <div class="anim-parameter">
+                        <div class="param-name">Salto</div>
+                        <div class="param-value">Trigger Jump</div>
+                        <div class="param-description">Dispara la animación de salto una vez</div>
+                    </div>
+                    <div class="anim-parameter">
+                        <div class="param-name">Ataque</div>
+                        <div class="param-value">Trigger Attack</div>
+                        <div class="param-description">Inicia la animación de ataque</div>
+                    </div>
+                    <div class="anim-parameter">
+                        <div class="param-name">Daño</div>
+                        <div class="param-value">Trigger Hurt</div>
+                        <div class="param-description">Activa la animación de recibir daño</div>
+                    </div>
+                    <div class="anim-parameter">
+                        <div class="param-name">Muerte</div>
+                        <div class="param-values">
+                            <div class="param-value">Trigger Dead</div>
+                            <div class="param-value">Trigger FallDeath</div>
+                        </div>
+                        <div class="param-description">Animaciones para diferentes tipos de muerte</div>
+                    </div>
+                </div>
+                
+                <div class="animation-flow">
+                    <h5>Flujo de Transiciones:</h5>
+                    <div class="flow-steps">
+                        <div class="flow-step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Input del jugador → Cambia parámetros</span>
+                        </div>
+                        <div class="flow-step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Animator Controller → Evalúa condiciones</span>
+                        </div>
+                        <div class="flow-step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Transiciones → Cambio de animación</span>
+                        </div>
+                        <div class="flow-step">
+                            <span class="step-number">4</span>
+                            <span class="step-text">Feedback visual → Player experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+	<!-- Nueva sección: Problemas Técnicos y Soluciones -->
+<div class="container">
+    <div class="programacion-content">
+        <div class="programacion-row">
+            <div class="programacion-text">
+                <h3>Problemas Técnicos y Soluciones</h3>
+                <p>Durante el desarrollo surgieron distintos desafíos técnicos relacionados con animación, eventos narrativos y control del flujo del juego. A continuación describiré algunos problemas concretos y las soluciones implementadas para mantener la coherencia del sistema sin añadir complejidad innecesaria.</p>
+
+                <h3>Activar diálogos obligatorios sin romper el ritmo del jugador</h3>
+                <p><strong>Problema:</strong> Algunos personajes debían hablar con el jugador en momentos específicos del recorrido, sin depender de la interacción manual ni del azar.</p>
+
+                <p><strong>Solución:</strong> Se implementaron triggers colocados estratégicamente en zonas por las que el jugador debe pasar. Al entrar en estos triggers, se dispara un evento que activa el diálogo del NPC correspondiente de forma automática.</p>
+
+                <h3>Gestión persistente del punto de reaparición del jugador</h3>
+                <p>Durante el desarrollo surgió la necesidad de mantener un punto de reaparición consistente para el jugador tras morir, evitando reinicios constantes del nivel y permitiendo una progresión más fluida.</p>
+
+                <p><strong>Problema:</strong> El sistema debía: recordar si existe o no un checkpoint activo, almacenar información adicional como la vida del jugador y ser accesible desde distintos scripts del juego</p>
+
+                <p><strong>Solución:</strong> Se implementó un administrador de checkpoints centralizado utilizando el patrón Singleton, permitiendo acceder al último punto de guardado desde cualquier sistema relevante del juego.</p>
+
+                <p>Gracias a esta solución el jugador puede reaparecer de forma consistente tras morir.</p>
+
+
+                <h3>Enemigos que caen del escenario durante la patrulla</h3>
+                <p><strong>Problema:</strong> Durante la implementación del movimiento de los enemigos, surgió el problema de que estos podían continuar avanzando y caer por los bordes del escenario, rompiendo la lógica del nivel y el desafío para el jugador.</p>
+
+                <p><strong>Solución:</strong> Se implementó un sistema de detección de borde mediante un Raycast hacia abajo desde un punto adelantado del enemigo. Al no detectar suelo, el enemigo invierte su dirección y orientación.</p>
+
+                <p><strong>Problema:</strong> También, era necesario reproducir animaciones de daño y muerte sin crear un sistema de estados complejo para cada tipo de enemigo.</p>
+
+               <p><strong>Solución:</strong> Las animaciones se activan directamente desde la lógica del enemigo mediante triggers, respondiendo a eventos claros como recibir daño o morir.</p> 
+
+            </div>
+
+<div class="section-media">
+                <div class="media-gallery">
+                    <!-- Imagen 1: Diagrama de mecánicas -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/code2.png" alt="Preservar progresión">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Preservar la progresión del jugador</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Guardar el estado del jugador junto con la posición</h4>
+                            <p>Al activar un checkpoint, el sistema guarda no solo la posición, sino también la vida actual del jugador en ese momento.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 2: Niveles y progresión -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/code4.gif" alt="CheckPoint Trigger">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Triggers para CheckPoints</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Evitar la reactivación constante de un checkpoint</h4>
+                            <p>Se implementó una bandera interna que marca el checkpoint como activado, asegurando que solo se registre una vez por sesión.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 3: Sistema de combate -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/code3.gif" alt="Ref Visual">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Referencia visual para progreso de combate</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Contador para enemigos</h4>
+                            <p>Se integró un contador visual de impactos que se actualiza dinámicamente cada vez que el enemigo recibe daño, mostrando cuántos golpes faltan antes de su derrota.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 4: Mapa del mundo -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/code5.gif" alt="Flujo de juego mejora">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Mayor control del flujo del juego</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Permitir que otros sistemas consulten el estado del diálogo</h4>
+                            <p>Otros sistemas del juego necesitaban saber si un diálogo estaba activo para pausar movimiento, eventos o acciones. Así que, expuse un método que permite consultar el estado actual del diálogo sin acceder directamente a su lógica interna.</p>
+                        </div>
+                    </div>
+                </div>
+            	</div> 
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilos específicos para la sección de programación */
+    .programacion-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .programacion-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+    
+    .programacion-text {
+        padding-right: 20px;
+    }
+    
+    .programacion-media {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .programacion-image {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .programacion-image img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .image-caption {
+        background-color: rgba(33, 32, 32, 0.9);
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 201, 222, 0.1);
+    }
+    
+    .image-caption i {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        display: block;
+    }
+    
+    .image-caption p {
+        color: var(--text-color);
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    .programacion-full {
+        margin-top: 20px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    /* Estilos para el diagrama */
+    .diagram-container {
+        background-color: rgba(33, 32, 32, 0.8);
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 30px;
+        border: 1px solid rgba(255, 201, 222, 0.1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .diagram-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .diagram-header h4 {
+        color: var(--accent-color);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.3rem;
+    }
+    
+    .diagram-toggle {
+        display: flex;
+        gap: 10px;
+        background-color: rgba(255, 201, 222, 0.1);
+        padding: 5px;
+        border-radius: 8px;
+    }
+    
+    .toggle-btn {
+        background-color: transparent;
+        color: var(--text-secondary);
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-family: 'Segoe UI', 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .toggle-btn.active {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+    }
+    
+    .toggle-btn:hover:not(.active) {
+        background-color: rgba(255, 201, 222, 0.2);
+        color: var(--text-color);
+    }
+    
+    .diagram-content {
+        margin-bottom: 25px;
+    }
+    
+    .diagram-version {
+        display: none;
+    }
+    
+    .diagram-version.active {
+        display: block;
+    }
+    
+    .code-tree {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+        padding: 20px;
+        overflow-x: auto;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: var(--text-color);
+        border: 1px solid rgba(255, 201, 222, 0.1);
+        white-space: pre;
+        tab-size: 4;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    
+    .code-tree::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .code-tree::-webkit-scrollbar-track {
+        background: rgba(255, 201, 222, 0.1);
+        border-radius: 4px;
+    }
+    
+    .code-tree::-webkit-scrollbar-thumb {
+        background: var(--accent-color);
+        border-radius: 4px;
+    }
+    
+    /* Colores para el árbol de directorios */
+    .code-tree {
+        color: #D9B99E;
+    }
+    
+    .code-tree .folder {
+        color: #FFC9DE;
+        font-weight: bold;
+    }
+    
+    .code-tree .file {
+        color: #C4C4C4;
+    }
+    
+    .diagram-info {
+        background-color: rgba(89, 89, 89, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        border-left: 4px solid var(--accent-color);
+    }
+    
+    .diagram-info h5 {
+        color: var(--accent-color);
+        margin-top: 0;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1.1rem;
+    }
+    
+    .diagram-info p {
+        color: var(--text-secondary);
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    .diagram-info p:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+        .programacion-row {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .programacion-text {
+            padding-right: 0;
+        }
+        
+        .programacion-image {
+            max-width: 100%;
+        }
+        
+        .diagram-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .diagram-toggle {
+            width: 100%;
+        }
+        
+        .toggle-btn {
+            flex: 1;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .programacion-image img {
+            height: 220px;
+        }
+        
+        .code-tree {
+            font-size: 0.8rem;
+            padding: 15px;
+        }
+        
+        .diagram-container {
+            padding: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .programacion-image img {
+            height: 180px;
+        }
+        
+        .code-tree {
+            font-size: 0.75rem;
+        }
+        
+        .diagram-info {
+            padding: 15px;
+        }
+    }
+
+        /* Estilos específicos para los diagramas de personaje */
+    .character-diagram {
+        background-color: rgba(44, 44, 44, 0.9);
+        border: 1px solid rgba(255, 201, 222, 0.1);
+    }
+    
+
+	.character-diagram {
+	    width: 79%;
+	    max-width: 80%;
+	    box-sizing: border-box;
+	    margin: 50px auto 0 auto; /* Centrado y margen superior */
+	    margin-bottom: 50px;
+	}
+
+    .diagram-description {
+        background-color: rgba(33, 32, 32, 0.7);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        border-left: 4px solid var(--accent-color);
+    }
+    
+    .diagram-description p {
+        color: var(--text-secondary);
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+    
+    .diagram-description p:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Estilos para los diagramas de flujo */
+    .flowchart {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        padding: 25px;
+        border: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .flowchart-title {
+        color: var(--accent-color);
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .flowchart-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    .flowchart-node {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 12px 20px;
+        border-radius: 8px;
+        margin: 10px 0;
+        text-align: center;
+        max-width: 500px;
+        max-height: 100px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .flowchart-node.start {
+        background-color: rgba(15, 206, 124, 0.2);
+        border-color: var(--accent-color);
+        font-weight: 600;
+    }
+    
+    .flowchart-node.action {
+        background-color: rgba(255, 201, 222, 0.2);
+        border-color: var(--accent-color);
+    }
+    
+    .flowchart-node.warning {
+        background-color: rgba(255, 100, 100, 0.2);
+        border-color: rgba(255, 100, 100, 0.5);
+    }
+    
+    .flowchart-arrow {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        margin: 5px 0;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .flowchart-decision {
+        background-color: rgba(89, 89, 89, 0.5);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 15px 0;
+        border: 2px dashed rgba(255, 201, 222, 0.3);
+        position: relative;
+        min-width: 300px;
+    }
+    
+    .decision-text {
+        color: var(--accent-color);
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .decision-branches {
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+        margin-top: 15px;
+    }
+    
+    .branch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .branch-label {
+        background-color: rgba(255, 201, 222, 0.2);
+        color: var(--accent-color);
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    /* Estilos para el diagrama de animaciones */
+    .flowchart-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .anim-parameter {
+        background-color: rgba(33, 32, 32, 0.8);
+        border-radius: 8px;
+        padding: 20px;
+        border: 1px solid rgba(255, 201, 222, 0.1);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .anim-parameter:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+    }
+    
+    .param-name {
+        color: var(--accent-color);
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .param-value, .param-values {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: var(--text-color);
+        padding: 8px 12px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        border-left: 3px solid var(--accent-color);
+    }
+    
+    .param-values {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .param-description {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .animation-flow {
+        background-color: rgba(33, 32, 32, 0.8);
+        border-radius: 8px;
+        padding: 20px;
+        border-top: 3px solid var(--accent-color);
+    }
+    
+    .animation-flow h5 {
+        color: var(--accent-color);
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .flow-steps {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    
+    .flow-step {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: rgba(89, 89, 89, 0.3);
+        padding: 12px 15px;
+        border-radius: 8px;
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .step-number {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+    
+    .step-text {
+        color: var(--text-color);
+        font-size: 0.95rem;
+    }
+    
+    /* Responsive para diagramas de flujo */
+    @media (max-width: 992px) {
+        .decision-branches {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .branch {
+            width: 100%;
+        }
+        
+        .flowchart-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .flow-steps {
+            flex-direction: column;
+        }
+        
+        .flow-step {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .flowchart {
+            padding: 20px;
+        }
+        
+        .flowchart-node {
+            min-width: 150px;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+        }
+        
+        .flowchart-decision {
+            min-width: 250px;
+            padding: 15px;
+        }
+        
+        .flowchart-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .diagram-toggle {
+            width: 100%;
+            overflow-x: auto;
+            justify-content: flex-start;
+        }
+        
+        .toggle-btn {
+            white-space: nowrap;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .flowchart {
+            padding: 15px;
+        }
+        
+        .flowchart-node {
+            min-width: 120px;
+            font-size: 0.85rem;
+        }
+        
+        .flowchart-decision {
+            min-width: 200px;
+        }
+        
+        .decision-text {
+            font-size: 1rem;
+        }
+        
+        .param-name {
+            font-size: 1rem;
+        }
+    }
+
+	    /* Estilos para el encabezado plegable */
+	.collapse-header {
+	    margin-top: 20px;
+	    margin-bottom: 10px;
+	    border-top: 1px solid rgba(255, 201, 222, 0.2);
+	    padding-top: 20px;
+	}
+
+	.collapse-header h5 {
+	    color: var(--accent-color);
+	    font-size: 1.1rem;
+	    margin: 0;
+	    display: flex;
+	    align-items: center;
+	}
+
+	.collapse-toggle {
+	    background: none;
+	    border: none;
+	    color: inherit;
+	    font: inherit;
+	    cursor: pointer;
+	    padding-bottom: 50px;
+	    display: flex;
+	    align-items: center;
+	    gap: 8px;
+	    transition: color 0.3s ease;
+	    margin: 0 auto;
+	}
+
+	.collapse-toggle:hover {
+	    color: var(--text-color);
+	}
+
+	.collapse-icon {
+	    font-size: 0.9rem;
+	    transition: transform 0.3s ease;
+	}
+
+	.collapse-toggle[aria-expanded="true"] .collapse-icon {
+	    transform: rotate(90deg);
+	}
+
+	/* Contenedor plegable */
+	.collapsible-diagrams {
+	    overflow: hidden;
+	    transition: all 0.3s ease;
+	}
+
+	.collapsible-diagrams.expanded {
+	    display: block;
+	}
+</style>
+</section>
+
+    <!-- Sección: Narrativa y construcción del mundo -->
+    <!-- Sección: Narrativa y construcción del mundo -->
+<section id="narrativa">
+    <div class="container">
+        <h2>Narrativa y construcción del mundo</h2>
+        <div class="section-content">
+            <div class="section-text">
+                <p>Anacrusa se sitúa en un mundo donde el sonido se ha ido extinguiendo. Las notas musicales que lo habitaban han sido corrompidas por el silencio, convirtiéndose en entidades hostiles.</p>
+                <p>Sol nace de una caja musical estropeada y solo puede existir mientras es interpretada. Su viaje no busca restaurar el mundo, sino encontrar a los supuestos seres que aún cantan, cuya existencia se debate entre la leyenda y la esperanza.</p>
+            </div>
+            <div class="section-media">
+                <div class="media-placeholder">
+                    <img src="img/videogames/edificios.png">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carrusel de Personajes -->
+        <div class="characters-section">
+            <h3 class="characters-title">Personajes del Mundo de Anacrusa</h3>
+            
+            <div class="characters-carousel">
+                <!-- Botón izquierdo -->
+                <button class="carousel-btn prev-btn" aria-label="Personaje anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <!-- Contenedor del carrusel -->
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Tarjeta 1: Sol (Protagonista) -->
+                        <div class="character-card active" data-index="0">
+                            <div class="card-header">
+                                <span class="character-type npc">Protagonista</span>
+                                <div class="character-id">01</div>
+                            </div>
+                            <div class="character-image">
+                                <img src="img/videogames/sol.png" alt="Sol, el protagonista">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="character-info">
+                                <h4 class="character-name">Sol</h4>
+                                <p class="character-description">
+                                    Una nota musical consciente nacida de una caja musical rota. Su existencia depende de ser interpretada, por lo que debe mantenerse en movimiento constante. Busca a los legendarios pájaros cantores en un mundo donde el silencio corrompe todo.
+                                </p>
+                                <div class="character-traits">
+                                    <span class="trait">Expectante</span>
+                                    <span class="trait">Persistente</span>
+                                    <span class="trait">Valiente</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tarjeta 2: NPC Melodía -->
+                        <div class="character-card" data-index="1">
+                            <div class="card-header">
+                                <span class="character-type npc">NPC</span>
+                                <div class="character-id">02</div>
+                            </div>
+                            <div class="character-image">
+                                <img src="img/videogames/bailarina-npc.png" alt="Melodía, NPC">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="character-info">
+                                <h4 class="character-name">Bailarina</h4>
+                                <p class="character-description">
+                                    Es la muñeca que habita la caja musical de la que Sol nació. Aunque el mecanismo lleva mucho tiempo roto y el mundo se encuentra sumido en el silencio, ella continúa cumpliendo su propósito: enviar a las notas que emergen de la caja a buscar la existencia de los pájaros, criaturas de las que se dice que aún son capaces de cantar.
+                                </p>
+                                <div class="character-traits">
+                                    <span class="trait">Sabio</span>
+                                    <span class="trait">Guía</span>
+                                    <span class="trait">Nostálgico</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tarjeta 3: NPC Armonía -->
+                        <div class="character-card" data-index="2">
+                            <div class="card-header">
+                                <span class="character-type enemy">Enemigo</span>
+                                <div class="character-id">03</div>
+                            </div>
+                            <div class="character-image">
+                                <img src="img/videogames/armonia-npc.png" alt="Armonía, NPC">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="character-info">
+                                <h4 class="character-name">El loquito</h4>
+                                <p class="character-description">
+                                    Esta nota musical vive refugiada en una casa abandonada. Su comportamiento es errático y confuso: habla como si Sol fuera alguien más, llamándole “Kevin”, y se refiere a su objeto más preciado —una pequeña pistola con forma de piano— como “Katrina”. En este encuentro, Sol obtiene su nueva habilidad de combate a distancia. Aunque el objeto resulta crucial para su supervivencia, el Ermitaño parece profundamente apegado a él, tratándolo más como un recuerdo que como un arma. No se conoce su pasado ni el origen de su comportamiento. 
+                                </p>
+                                <div class="character-traits">
+                                    <span class="trait">Desorientado</span>
+                                    <span class="trait">Errático</span>
+                                    <span class="trait">Obsesivo</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tarjeta 4: Enemigo Silencio -->
+                        <div class="character-card" data-index="3">
+                            <div class="card-header">
+                                <span class="character-type enemy">Enemigo</span>
+                                <div class="character-id">04</div>
+                            </div>
+                            <div class="character-image">
+                                <img src="img/videogames/enemy.png" alt="Silencio, enemigo">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="character-info">
+                                <h4 class="character-name">Notas Corruptas</h4>
+                                <p class="character-description">
+                                     Emergen donde la música ha desaparecido. Se alimentan de otras notas que aún no están corruptas y buscan la melodia que perdieron. Son la manifestación física de la corrupción que afecta al mundo de Anacrusa.
+                                </p>
+                                <div class="character-traits">
+                                    <span class="trait">Corruptor</span>
+                                    <span class="trait">Voraz</span>
+                                    <span class="trait">Infectante</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tarjeta 5: Enemigo Eco Roto -->
+                        <div class="character-card" data-index="4">
+                            <div class="card-header">
+                                <span class="character-type npc">NPC</span>
+                                <div class="character-id">05</div>
+                            </div>
+                            <div class="character-image">
+                                <img src="img/videogames/tumba.png" alt="NPC">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="character-info">
+                                <h4 class="character-name">La nota de la tumba</h4>
+                                <p class="character-description">
+                                    una nota musical que ha decidido permanecer en un mismo lugar, junto a un pequeño altar que construyó en memoria de una nota compañera que ya no existe. El altar funciona como una tumba simbólica y marca el punto en el que el personaje ha aceptado que la corrupción es inevitable, incluso para ella misma. A diferencia de otros personajes, esta nota aún conserva esperanza. Al encontrarse con Sol, le entrega la primera pieza sagrada, iniciando de forma concreta la búsqueda de los pájaros.
+                                </p>
+                                <div class="character-traits">
+                                    <span class="trait">Sacrificial</span>
+                                    <span class="trait">Determinada</span>
+                                    <span class="trait">Devota</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tarjeta 6: NPC Ritmo -->
+                        <div class="character-card" data-index="5">
+                            <div class="card-header">
+                                <span class="character-type npc">NPC</span>
+                                <div class="character-id">06</div>
+                            </div>
+                            <div class="character-image">
+                                <img src="img/videogames/cueva.png" alt="Ritmo, NPC">
+                                <div class="image-overlay"></div>
+                            </div>
+                            <div class="character-info">
+                                <h4 class="character-name">La nota de la cueva</h4>
+                                <p class="character-description">
+                                    una nota musical que habita en el fondo de una cueva, aislada del resto del mundo. Ha perdido la esperanza de encontrar a los pájaros y ve su desaparición como algo inevitable. Durante su diálogo con Sol, menciona la existencia de tres piezas sagradas que, según una antigua leyenda, permitirían encontrarlos. Sin embargo, deja claro que no cree en esa historia y considera inútil intentar reunirlas, ya que nadie ha tenido éxito antes.
+                                </p>
+                                <div class="character-traits">
+                                    <span class="trait">Escéptico</span>
+                                    <span class="trait">Desgastado</span>
+                                    <span class="trait">Resignado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botón derecho -->
+                <button class="carousel-btn next-btn" aria-label="Personaje siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Indicadores de posición -->
+                <div class="carousel-indicators">
+                    <div class="indicator active" data-index="0"></div>
+                    <div class="indicator" data-index="1"></div>
+                    <div class="indicator" data-index="2"></div>
+                    <div class="indicator" data-index="3"></div>
+                    <div class="indicator" data-index="4"></div>
+                    <div class="indicator" data-index="5"></div>
+                </div>
+            </div>
+        </div>
+
+                <h3>Tono y Atmosfera</h3>
+        <div class="section-content">
+            <div class="section-text">
+                <p>El tono de Anacrusa es melancólico y contemplativo. No es un juego desesperado ni frenético. Tampoco es completamente oscuro: siempre hay una tensión entre pérdida y esperanza.</p>
+
+                <p>La atmósfera se construye principalmente desde lo visual y lo sonoro: El uso predominante del blanco y negro refuerza la ausencia de vida y sonido, las zonas con color funcionan como excepciones narrativas, asociadas a momentos clave o restos de lo que el mundo fue o el silencio constante convierte cada sonido de Sol en un recordatorio de su existencia.</p>
+            </div>
+            <div class="section-media">
+                <div class="media-placeholder">
+                    <img src="img/videogames/edificio2.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    /* Estilos para la sección de personajes */
+    .characters-section {
+        margin-top: 60px;
+        padding-top: 40px;
+        border-top: 1px solid rgba(255, 201, 222, 0.2);
+        margin-bottom: 30px;
+        max-width: 1200px;
+        width: 1200px;
+    }
+    
+    .characters-title {
+        color: var(--accent-color);
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .characters-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--accent-color);
+    }
+    
+    /* Estilos del carrusel */
+    .characters-carousel {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 60px;
+    }
+    
+    .carousel-container {
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        background-color: rgba(33, 32, 32, 0.8);
+        border: 1px solid rgba(255, 201, 222, 0.1);
+    }
+    
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+    }
+    
+    /* Estilos de las tarjetas */
+    .character-card {
+        flex: 0 0 100%;
+        padding: 25px;
+        box-sizing: border-box;
+        opacity: 0.4;
+        transform: scale(0.85);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        filter: blur(2px);
+        pointer-events: none;
+    }
+    
+    .character-card.active {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+        pointer-events: auto;
+    }
+    
+    .character-card .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .character-type {
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .character-type.npc {
+        background-color: rgba(15, 206, 124, 0.2);
+        color: #0fce7c;
+        border: 1px solid rgba(15, 206, 124, 0.4);
+    }
+    
+    .character-type.enemy {
+        background-color: rgba(255, 100, 100, 0.2);
+        color: #ff6464;
+        border: 1px solid rgba(255, 100, 100, 0.4);
+    }
+    
+    .character-id {
+        color: var(--text-secondary);
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: 'Courier New', monospace;
+    }
+    
+    .character-image {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .character-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .character-card.active .character-image img {
+        transform: scale(1.05);
+    }
+    
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 60%, rgba(33, 32, 32, 0.9) 100%);
+    }
+    
+    .character-info {
+        padding: 0 10px;
+    }
+    
+    .character-name {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .character-description {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: justify;
+        font-size: 0.95rem;
+    }
+    
+    .character-traits {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .trait {
+        background-color: rgba(255, 201, 222, 0.1);
+        color: var(--accent-color);
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        border: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    /* Botones del carrusel */
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(33, 32, 32, 0.9);
+        border: 2px solid rgba(255, 201, 222, 0.3);
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .carousel-btn:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        transform: translateY(-50%) scale(1.1);
+        border-color: var(--accent-color);
+    }
+    
+    .carousel-btn:active {
+        transform: translateY(-50%) scale(0.95);
+    }
+    
+    .prev-btn {
+        left: 0;
+    }
+    
+    .next-btn {
+        right: 0;
+    }
+    
+    /* Indicadores */
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    
+    .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 201, 222, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .indicator.active {
+        background-color: var(--accent-color);
+        transform: scale(1.2);
+    }
+    
+    .indicator:hover {
+        background-color: rgba(255, 201, 222, 0.6);
+        transform: scale(1.1);
+    }
+    
+    /* Instrucciones */
+    .carousel-instruction {
+        text-align: center;
+        color: var(--text-secondary);
+        margin-top: 20px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .carousel-instruction i {
+        color: var(--accent-color);
+    }
+    
+    /* Efecto de arrastre (drag) */
+    .carousel-container.dragging {
+        cursor: grabbing;
+    }
+    
+    .carousel-container.dragging .carousel-track {
+        transition: none;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+        .characters-carousel {
+            padding: 0 50px;
+        }
+        
+        .character-image {
+            height: 220px;
+        }
+        
+        .carousel-btn {
+            width: 45px;
+            height: 45px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .characters-carousel {
+            padding: 0 40px;
+        }
+        
+        .character-card {
+            padding: 20px;
+        }
+        
+        .character-image {
+            height: 200px;
+        }
+        
+        .character-name {
+            font-size: 1.4rem;
+        }
+        
+        .carousel-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .characters-carousel {
+            padding: 0 30px;
+        }
+        
+        .character-card {
+            padding: 15px;
+        }
+        
+        .character-image {
+            height: 180px;
+        }
+        
+        .character-name {
+            font-size: 1.3rem;
+        }
+        
+        .character-description {
+            font-size: 0.9rem;
+        }
+        
+        .carousel-btn {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .carousel-indicators {
+            margin-top: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .characters-title {
+            font-size: 1.5rem;
+        }
+        
+        .characters-carousel {
+            padding: 0 25px;
+        }
+        
+        .character-card {
+            padding: 12px;
+        }
+        
+        .character-image {
+            height: 160px;
+        }
+        
+        .character-traits {
+            gap: 5px;
+        }
+        
+        .trait {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+        }
+    }
+</style>
+</section>
+
+    <!-- Sección: Dirección artística -->
+    <section id="artistica">
+        <div class="container">
+            <h2>Dirección artística</h2>
+            <div class="section-content">
+                <div class="section-text">
+                    <h3>Estilo visual</h3>
+                    <p>Anacrusa utiliza un estilo 2D minimalista y simbólico, con personajes y escenarios construidos a partir de formas simples y siluetas claras. Este universo se construye a partir de una estética dibujada a mano, con líneas irregulares, texturas visibles y un acabado que remite al boceto y al grabado.</p>
+
+                   <p>Los escenarios presentan una fuerte separación por capas: Primer plano denso y oscuro, Plano jugable claramente delimitado, Fondos repetitivos y verticales que refuerzan profundidad</p> 
+                    <button class="modal-btn" data-modal="modal-moodboard">
+                        <i class="fas fa-images"></i> Moodboard
+                    </button>
+
+                    
+
+                </div>
+                <div class="section-media">
+                    <div class="media-placeholder">
+                        <img src="img/videogames/concept2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Ilustración y assets -->
+    <section id="ilustracion">
+        <div class="container">
+            <h2>Ilustración y assets</h2>
+            <!-- Carrusel de Assets (Sección separada) -->
+<div class="assets-showcase-section">
+    <div class="container">
+        <div class="assets-carousel-wrapper">
+            <h3 class="assets-title">Galería de Assets</h3>
+            <p class="assets-subtitle">Todos los assets fueron diseñados en procreate, el objetivo de esta sección es mostrar algunos de los elementos que conforman la estética de Anacrusa.</p>
+            
+            <div class="assets-carousel">
+                <!-- Contenedor del carrusel -->
+                <div class="carousel-container">
+                                       
+                    <!-- Slides del carrusel -->
+                    <div class="carousel-slides">
+                        <!-- Slide 1 -->
+                        <div class="slide active" data-index="0">
+                            <div class="slide-image">
+                                <img src="img/assets/3.png" alt="Asset 1 - Diseño de personaje Sol">
+                            </div>
+                            <div class="slide-caption">
+                                <h4>Sol - Personaje Principal</h4>
+                                <p>Diseño final del personaje principal con algunos de sus estados de animación.</p>
+                                <div class="slide-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 1920×1080px</span>
+                                    <span><i class="fas fa-paint-brush"></i> Procreate</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="slide" data-index="1">
+                            <div class="slide-image">
+                                <img src="img/assets/4.png" alt="Asset 2 - Enemigos del silencio">
+                            </div>
+                            <div class="slide-caption">
+                                <h4>Props y objetos descorativos</h4>
+                                <p>Diseñados con una estética monocromática y textura manual. Los props combinan formas simples con bordes irregulares y sombreado rugoso, reforzando una sensación de abandono y melancolía. Los cristales introducen el único acento cromático frío, estos funcionan como elementos narrativos clave y puntos de contraste visual dentro del entorno.</p>
+                                <div class="slide-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 1920×1080px</span>
+                                    <span><i class="fas fa-paint-brush"></i> Procreate</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="slide" data-index="2">
+                            <div class="slide-image">
+                                <img src="img/assets/5.png" alt="Asset 3 - Escenarios del mundo">
+                            </div>
+                            <div class="slide-caption">
+                                <h4>UI y elementos narrativos</h4>
+                                <p>Sistema de interfaz y elementos narrativos integrado al lenguaje visual del mundo. Como en todo el mundo de Anacrusa, predomina el uso de grises y blancos con contornos orgánicos, simulando materiales desgastados. Los fragmentos y símbolos musicales refuerzan la narrativa, mientras que la UI mantiene legibilidad sin romper la atmósfera oscura y contemplativa del juego.</p>
+                                <div class="slide-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 1920×1080px</span>
+                                    <span><i class="fas fa-paint-brush"></i> Procreate + Photoshop</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="slide" data-index="3">
+                            <div class="slide-image">
+                                <img src="img/assets/6.png" alt="Asset 4 - Elementos UI">
+                            </div>
+                            <div class="slide-caption">
+                                <h4>Entorno y tileset</h4>
+                                <p>Las formas vegetales y estructuras de piedra presentan una textura densa y caótica, reforzando la sensación de un mundo natural deteriorado y silencioso.</p>
+                                <div class="slide-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 1920×1080px</span>
+                                    <span><i class="fas fa-paint-brush"></i> Procreate</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5 -->
+                        <div class="slide" data-index="4">
+                            <div class="slide-image">
+                                <img src="img/assets/7.png" alt="Asset 5 - Objetos interactivos">
+                            </div>
+                            <div class="slide-caption">
+                                <h4>Texturas base</h4>
+                                <p>Biblioteca de texturas base utilizadas para fondos, sombreado y variación visual.</p>
+                                <div class="slide-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 1920×1080px</span>
+                                    <span><i class="fas fa-paint-brush"></i> Procreate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-index="0"></button>
+                    <button class="indicator" data-index="1"></button>
+                    <button class="indicator" data-index="2"></button>
+                    <button class="indicator" data-index="3"></button>
+                    <button class="indicator" data-index="4"></button>
+                </div>
+                
+                <!-- Contador -->
+                <div class="carousel-counter">
+                    <span class="current-slide">1</span> / <span class="total-slides">5</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+	<style>
+    /* Sección separada para el carrusel de assets */
+    .assets-showcase-section {
+        background-color: var(--secondary-color);
+        padding: 60px 0;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 201, 222, 0.2);
+        border-bottom: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .assets-carousel-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .assets-title {
+        color: var(--accent-color);
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .assets-subtitle {
+        color: var(--text-secondary);
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 1.1rem;
+    }
+    
+    /* Estilos del carrusel */
+    .assets-carousel {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
+    .carousel-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .carousel-btn {
+        background-color: rgba(255, 201, 222, 0.1);
+        border: 2px solid rgba(255, 201, 222, 0.3);
+        color: var(--accent-color);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+    
+    .carousel-btn:hover {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        border-color: var(--accent-color);
+        transform: scale(1.1);
+    }
+    
+    .carousel-btn:active {
+        transform: scale(0.95);
+    }
+    
+    .carousel-slides {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        background-color: rgba(33, 32, 32, 0.9);
+    }
+    
+    .slide {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    
+    .slide.active {
+        display: block;
+        opacity: 1;
+        animation: slideFadeIn 0.5s ease;
+    }
+    
+    @keyframes slideFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .slide-image {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        background-color: var(--primary-color);
+    }
+    
+    .slide-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    
+    .slide-caption {
+        padding: 25px;
+        background-color: rgba(33, 32, 32, 0.95);
+        border-top: 3px solid var(--accent-color);
+    }
+    
+    .slide-caption h4 {
+        color: var(--accent-color);
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+    }
+    
+    .slide-caption p {
+        color: var(--text-secondary);
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    .slide-meta {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .slide-meta span {
+        color: var(--text-color);
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .slide-meta i {
+        color: var(--accent-color);
+    }
+    
+    /* Indicadores */
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .carousel-indicators .indicator {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(255, 201, 222, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+    
+    .carousel-indicators .indicator.active {
+        background-color: var(--accent-color);
+        transform: scale(1.2);
+    }
+    
+    .carousel-indicators .indicator:hover {
+        background-color: rgba(255, 201, 222, 0.6);
+        transform: scale(1.1);
+    }
+    
+    /* Contador */
+    .carousel-counter {
+        text-align: center;
+        color: var(--text-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    
+    .current-slide {
+        color: var(--accent-color);
+    }
+    
+    /* Descripción general */
+    .assets-description {
+        background-color: rgba(33, 32, 32, 0.8);
+        padding: 20px 25px;
+        border-radius: 10px;
+        border-left: 4px solid var(--accent-color);
+        margin-top: 30px;
+    }
+    
+    .assets-description p {
+        color: var(--text-secondary);
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        line-height: 1.6;
+    }
+    
+    .assets-description i {
+        color: var(--accent-color);
+        margin-top: 3px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .carousel-container {
+            padding: 0 20px;
+        }
+        
+        .slide-image {
+            height: 450px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .assets-showcase-section {
+            padding: 50px 0;
+        }
+        
+        .slide-image {
+            height: 400px;
+        }
+        
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            font-size: 1.3rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .assets-title {
+            font-size: 1.7rem;
+        }
+        
+        .assets-subtitle {
+            font-size: 1rem;
+        }
+        
+        .slide-image {
+            height: 350px;
+        }
+        
+        .slide-caption {
+            padding: 20px;
+        }
+        
+        .slide-caption h4 {
+            font-size: 1.3rem;
+        }
+        
+        .carousel-container {
+            gap: 15px;
+        }
+        
+        .carousel-btn {
+            width: 45px;
+            height: 45px;
+            font-size: 1.2rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .assets-showcase-section {
+            padding: 40px 0;
+        }
+        
+        .assets-title {
+            font-size: 1.5rem;
+        }
+        
+        .slide-image {
+            height: 280px;
+        }
+        
+        .carousel-container {
+            gap: 10px;
+            padding: 0 10px;
+        }
+        
+        .carousel-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+        }
+        
+        .slide-caption {
+            padding: 15px;
+        }
+        
+        .slide-caption h4 {
+            font-size: 1.2rem;
+        }
+        
+        .slide-caption p {
+            font-size: 0.9rem;
+        }
+        
+        .carousel-indicators {
+            gap: 10px;
+        }
+        
+        .carousel-indicators .indicator {
+            width: 12px;
+            height: 12px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .slide-image {
+            height: 230px;
+        }
+        
+        .assets-subtitle {
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+        
+        .assets-description {
+            padding: 15px;
+        }
+        
+        .assets-description p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+    </section>
+
+    <!-- Sección: UI / UX -->
+    <section id="ui">
+        <div class="container">
+            <h2>UI / UX</h2>
+            <div class="section-content">
+                <div class="section-text">
+                    
+                    <p>La interfaz de usuario de Anacrusa fue diseñada bajo un enfoque minimalista e inmersivo, priorizando la experiencia del jugador por encima de la presencia constante de elementos en pantalla. El HUD se manifiesta únicamente en momentos clave, cuando la información es relevante para la toma de decisiones, integrándose visualmente con el mundo del juego para evitar rupturas en la inmersión. Este enfoque busca comunicar lo esencial de forma clara y oportuna, acompañando el gameplay sin interferir con su ritmo ni con la exploración del entorno.</p>
+                    
+                    <h3>Menú</h3>
+
+                    <p>El menú de inicio de Anacrusa fue diseñado como una interfaz simple y directa, priorizando el acceso inmediato al juego. Las opciones principales —jugar, créditos y salir— se presentan de forma clara, reduciendo la carga cognitiva y permitiendo que el jugador ingrese rápidamente a la experiencia sin distracciones innecesarias.</p>
+
+                    <h3>HUD — Información imprescindible durante el gameplay</h3>
+
+                    <p>El diseño del HUD en Anacrusa se centra en mostrar únicamente la información necesaria para que el jugador pueda tomar decisiones inmediatas sin interrumpir el ritmo del juego ni saturar la pantalla.</p>
+
+                    <p>Durante la exploración, la interacción con los NPCs se comunica a través de un mensaje contextual que aparece únicamente cuando el jugador se encuentra dentro del rango de interacción. Este mensaje indica la posibilidad de iniciar un diálogo al presionar una tecla específica, permitiendo que el jugador decida libremente si desea interactuar o continuar su recorrido. De esta manera, la UI refuerza la exploración voluntaria y evita interacciones forzadas.</p>
+
+                    <h3>UI Durante el Combate</h3>
+                    <p>En el combate, la interfaz comunica de forma directa el progreso del enfrentamiento mediante un indicador numérico que representa la cantidad de golpes necesarios para derrotar a un enemigo. Este valor disminuye con cada impacto recibido, proporcionando al jugador un feedback claro sobre la efectividad de sus acciones y facilitando la toma de decisiones durante el enfrentamiento.</p>
+
+
+                    <p>La vida del personaje se representa de forma permanente en una esquina de la pantalla, utilizando un sistema de corazones que permite una lectura rápida del estado del jugador sin distraer de la acción principal. Cuando el personaje alcanza el límite máximo de vida, la interfaz informa que no es posible recolectar más corazones, evitando confusión y reforzando el entendimiento de las reglas del sistema de juego.</p>
+
+                    <h3>UI para Acertijos</h3>
+                    <p>Además, ciertos acertijos del entorno requieren que el jugador elimine una cantidad específica de enemigos para desbloquear puertas u otras áreas. Esta información se presenta como un objetivo claro dentro del juego, otorgando sentido al combate y guiando el progreso sin eliminar la sensación de desafío.</p>
+                </div>
+                <div class="section-media">
+                <div class="media-gallery">
+
+                    <!-- Imagen 1 -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/ui1.gif" alt="UI Inicial">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Menú de inicio: Jugar / Créditos / Salir</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Claridad inmediata de opciones</h4>
+                            <p>El orden lógico de acciones en el menú principal prioriza el jugar como la acción primaria.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 2 -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/ui2.gif" alt="NPCs Dialogue">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Tecla especial para interactuar</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Jerarquía visual de la Interfaz</h4>
+                            <p>Prioriza la información crítica para el gameplay, manteniendo los elementos permanentes —como la vida del personaje— en posiciones fijas y fácilmente reconocibles. Las interacciones secundarias, se presentan de manera contextual, apareciendo solo cuando son relevantes para el jugador.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 3: Sistema de combate -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/ui3.gif" alt="UI vidaPlayer">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">Tipografía</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Neutralidad para no competir con el arte</h4>
+                            <p>La tipografía utilizada corresponde a la fuente estándar de Unity, seleccionada por su alta legibilidad y neutralidad visual.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen 4: Mapa del mundo -->
+                    <div class="gallery-item">
+                        <div class="gallery-media">
+                            <img src="img/videogames/ui4.gif" alt="UI Enemigos">
+                            <div class="gallery-overlay">
+                                <p class="gallery-caption">UI con el gameplay</p>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>Integración de la UI con la experiencia</h4>
+                            <p>En conjunto, el HUD de Anacrusa prioriza la claridad, la funcionalidad y el feedback inmediato.</p>
+                        </div>
+                    </div>
+                </div>
+            	</div> 
+            </div>
+        </div>
+    </section>
+
+<!-- Sección: Iteración y pruebas -->
+<section id="pruebas">
+    <div class="container">
+        <h2>Iteración y pruebas</h2>
+        <div class="pruebas-content">
+            <!-- Columna izquierda: Contenido principal -->
+            <div class="pruebas-text">
+                <h3>Mejoras en Progresión y Jugabilidad</h3>
+                <p>Esta fase se centró en evaluar la jugabilidad, la claridad de sistemas y el equilibrio de dificultad, a partir de sesiones de playtesting tempranas con un grupo reducido de jugadores.</p>
+              
+                <div class="iteration-highlights">
+                    <h4>Listas de cambios implementados</h4>
+                    <div class="changes-grid">
+                        <div class="change-item">
+                            <div class="change-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="change-content">
+                                <h5>Checkpoints</h5>
+                                <p>Implementación visual y funcional de checkpoints como elementos diegéticos del mundo.</p>
+                            </div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-icon">
+                                <i class="fas fa-fist-raised"></i>
+                            </div>
+                            <div class="change-content">
+                                <h5>Combate cuerpo a cuerpo</h5>
+                                <p>Ajustes en las mecánicas de combate para mayor fluidez y respuesta.</p>
+                            </div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <div class="change-content">
+                                <h5>Progreso narrativo</h5>
+                                <p>Mejora en la lectura de progreso vinculada a las piezas sagradas.</p>
+                            </div>
+                        </div>
+                        <div class="change-item">
+                            <div class="change-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="change-content">
+                                <h5>Balance de dificultad</h5>
+                                <p>Revisión y ajuste del balance de dificultad general del juego.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Cambios clave a partir del feedback</h3>
+                
+                <div class="key-change">
+                    <div class="change-header">
+                        <i class="fas fa-chess-board"></i>
+                        <h4>Diseño de checkpoints</h4>
+                    </div>
+                    <p>A partir del feedback de los testers, los checkpoints fueron rediseñados como banquitas, integrándose de forma diegética al mundo del juego. Esta decisión permitió que el sistema de guardado se sintiera parte del entorno, reforzando la coherencia narrativa y visual.</p>
+                </div>
+                
+                <div class="key-change">
+                    <div class="change-header">
+                        <i class="fas fa-user-slash"></i>
+                        <h4>Daño por salto sobre enemigos</h4>
+                    </div>
+                    <p>Se implementó la mecánica de daño al saltar sobre enemigos, lo que amplió las opciones de combate y redujo la frustración en enfrentamientos cerrados. Este cambio mejoró el ritmo de juego y favoreció un enfoque más intuitivo para jugadores menos experimentados.</p>
+                </div>
+                
+                <div class="key-change">
+                    <div class="change-header">
+                        <i class="fas fa-gem"></i>
+                        <h4>Progresión ligada a las piezas sagradas</h4>
+                    </div>
+                    <p>El final del juego quedó condicionado a la recolección de las tres piezas sagradas, reforzando la exploración y la atención a la narrativa ambiental. Esta decisión fortaleció el peso narrativo del sistema de progreso, aunque también aumentó la exigencia para completar el juego.</p>
+                </div>
+                
+                <h3>Balance y ajuste final</h3>
+                <p>La fase final de desarrollo se centró en el balance del juego, optimización de rendimiento y pulido general. Ajustamos tiempos de carga, afinamos la respuesta de controles y depuramos bugs menores para ofrecer una experiencia fluida.</p>
+            </div>
+            
+            <!-- Columna derecha: Resultados de Playtesting -->
+            <div class="pruebas-media">
+                <div class="playtesting-results">
+                    <div class="results-header">
+                        <h3><i class="fas fa-vial"></i> Resultados de Playtesting</h3>
+                        <div class="results-subtitle">Pruebas con 6 jugadores cercanos</div>
+                    </div>
+                    
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Jugadores totales</div>
+                            <div class="stat-desc">Amigos cercanos familiarizados con plataformas</div>
+                        </div>
+                        
+                        <div class="stat-card highlight">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Final alcanzado</div>
+                            <div class="stat-desc">Sol encontró a los pájaros</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">50%</div>
+                            <div class="stat-label">Tasa de éxito</div>
+                            <div class="stat-desc">Con todas las piezas sagradas</div>
+                        </div>
+                    </div>
+                    
+                    <div class="playtesting-insights">
+                        <h4>Insights clave del playtesting</h4>
+                        <div class="insight-list">
+                            <div class="insight-item">
+                                <div class="insight-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="insight-content">
+                                    <h5>Alta dificultad</h5>
+                                    <p>El juego fue percibido como altamente desafiante, incluso para jugadores familiarizados con juegos de plataformas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="insight-item">
+                                <div class="insight-icon">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                </div>
+                                <div class="insight-content">
+                                    <h5>Claridad en objetivos</h5>
+                                    <p>Los jugadores que no recolectaron las tres piezas sagradas no lograron acceder al final, evidenciando falta de claridad inicial sobre la importancia de este objetivo.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="insight-item">
+                                <div class="insight-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="insight-content">
+                                    <h5>Impacto emocional</h5>
+                                    <p>A pesar de la dificultad, los testers destacaron la atmósfera y el peso emocional del desenlace, validando el enfoque narrativo del proyecto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testing-process">
+                        <h4>Proceso de testing</h4>
+                        <p>Las primeras pruebas fueron realizadas por amigos cercanos, quienes ofrecieron observaciones clave desde la experiencia de jugador, permitiendo ajustes iterativos que mejoraron significativamente la experiencia final.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    /* ===== ESTRUCTURA DE LA SECCIÓN PRUEBAS ===== */
+    .pruebas-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        margin-top: 30px;
+    }
+    
+    .pruebas-text {
+        padding-right: 20px;
+    }
+    
+    .pruebas-media {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+    }
+    
+    /* ===== ESTILOS UNIFICADOS PARA LA SECCIÓN DE PRUEBAS ===== */
+    
+    /* Contenedor de cambios - Estilo unificado */
+    .iteration-highlights {
+        background-color: rgba(33, 32, 32, 0.95);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 25px 0;
+        border: 1px solid rgba(255, 201, 222, 0.15);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .iteration-highlights:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 201, 222, 0.25);
+    }
+    
+    .iteration-highlights h4 {
+        color: var(--accent-color);
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .iteration-highlights h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+    }
+    
+    /* Grid de cambios - Mejor integración */
+    .changes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .change-item {
+        display: flex;
+        gap: 15px;
+        background-color: rgba(44, 44, 44, 0.7);
+        padding: 18px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-color);
+        transition: all 0.3s ease;
+        align-items: flex-start;
+        border: 1px solid rgba(255, 201, 222, 0.1);
+    }
+    
+    .change-item:hover {
+        transform: translateY(-5px);
+        background-color: rgba(44, 44, 44, 0.9);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-left-color: var(--text-color);
+    }
+    
+    .change-icon {
+        color: var(--accent-color);
+        font-size: 1.3rem;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        background-color: rgba(255, 201, 222, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .change-item:hover .change-icon {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        transform: rotate(5deg);
+    }
+    
+    .change-content h5 {
+        color: var(--text-color);
+        margin: 0 0 8px 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+    
+    .change-content p {
+        color: var(--text-secondary);
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Cambios clave - Estilo unificado con el diseño existente */
+    .key-change {
+        background-color: rgba(33, 32, 32, 0.95);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 25px 0;
+        border: 1px solid rgba(255, 201, 222, 0.15);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .key-change:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 201, 222, 0.25);
+    }
+    
+    .change-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .change-header i {
+        color: var(--accent-color);
+        font-size: 1.4rem;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 201, 222, 0.1);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .key-change:hover .change-header i {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        transform: scale(1.1);
+    }
+    
+    .change-header h4 {
+        color: var(--accent-color);
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        flex: 1;
+    }
+    
+    .key-change p {
+        color: var(--text-secondary);
+        margin: 0;
+        line-height: 1.7;
+        font-size: 0.95rem;
+    }
+    
+    /* ===== ESTILOS UNIFICADOS PARA PLAYTESTING ===== */
+    
+    .playtesting-results {
+        background-color: rgba(33, 32, 32, 0.95);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(255, 201, 222, 0.15);
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+    
+    .playtesting-results:hover {
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        border-color: rgba(255, 201, 222, 0.25);
+    }
+    
+    .results-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .results-header h3 {
+        color: var(--accent-color);
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .results-header h3 i {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 201, 222, 0.1);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .playtesting-results:hover .results-header h3 i {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        transform: rotate(10deg);
+    }
+    
+    .results-subtitle {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        font-style: italic;
+        margin-left: 60px;
+    }
+    
+    /* Estadísticas - Estilo unificado */
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+    
+    .stat-card {
+        background: linear-gradient(145deg, rgba(44, 44, 44, 0.9), rgba(33, 32, 32, 0.9));
+        border-radius: 12px;
+        padding: 25px 20px;
+        text-align: center;
+        border: 1px solid rgba(255, 201, 222, 0.1);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--accent-color), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        border-color: rgba(255, 201, 222, 0.3);
+    }
+    
+    .stat-card:hover::before {
+        opacity: 1;
+    }
+    
+    .stat-card.highlight {
+        border-color: var(--accent-color);
+        background: linear-gradient(145deg, rgba(44, 44, 44, 0.95), rgba(33, 32, 32, 0.95));
+        box-shadow: 0 5px 20px rgba(255, 201, 222, 0.1);
+    }
+    
+    .stat-card.highlight:hover {
+        box-shadow: 0 10px 30px rgba(255, 201, 222, 0.2);
+        transform: translateY(-8px) scale(1.02);
+    }
+    
+    .stat-number {
+        color: var(--accent-color);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    
+    .stat-label {
+        color: var(--text-color);
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .stat-desc {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+        line-height: 1.4;
+        opacity: 0.9;
+    }
+    
+    /* Insights - Estilo unificado */
+    .playtesting-insights {
+        margin: 35px 0;
+    }
+    
+    .playtesting-insights h4 {
+        color: var(--accent-color);
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .playtesting-insights h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+    }
+    
+    .insight-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    
+    .insight-item {
+        display: flex;
+        gap: 18px;
+        background-color: rgba(44, 44, 44, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid rgba(255, 201, 222, 0.3);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .insight-item:hover {
+        transform: translateX(5px);
+        background-color: rgba(44, 44, 44, 0.9);
+        border-left-color: var(--accent-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .insight-icon {
+        color: var(--accent-color);
+        font-size: 1.3rem;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 201, 222, 0.1);
+        border-radius: 10px;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .insight-item:hover .insight-icon {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        transform: rotate(10deg);
+    }
+    
+    .insight-content h5 {
+        color: var(--text-color);
+        margin: 0 0 10px 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+    
+    .insight-content p {
+        color: var(--text-secondary);
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    /* Proceso de testing - Estilo unificado */
+    .testing-process {
+        margin-top: 35px;
+        padding-top: 25px;
+        border-top: 1px solid rgba(255, 201, 222, 0.2);
+    }
+    
+    .testing-process h4 {
+        color: var(--accent-color);
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .testing-process p {
+        color: var(--text-secondary);
+        margin: 0;
+        line-height: 1.7;
+        font-size: 0.95rem;
+    }
+    
+    /* ===== RESPONSIVE UNIFICADO ===== */
+    @media (max-width: 1200px) {
+        .pruebas-content {
+            gap: 30px;
+        }
+        
+        .changes-grid {
+            gap: 15px;
+        }
+        
+        .stat-card {
+            padding: 20px 15px;
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .pruebas-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .pruebas-text {
+            padding-right: 0;
+        }
+        
+        .pruebas-media {
+            position: static;
+        }
+        
+        .changes-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .stats-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .stat-card:last-child {
+            grid-column: span 2;
+            max-width: 250px;
+            margin: 0 auto;
+        }
+        
+        .iteration-highlights,
+        .key-change {
+            padding: 20px;
+        }
+        
+        .playtesting-results {
+            padding: 25px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .stats-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .stat-card:last-child {
+            grid-column: span 1;
+            max-width: none;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+        }
+        
+        .change-item {
+            padding: 15px;
+        }
+        
+        .insight-item {
+            padding: 15px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .stats-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .stat-card {
+            padding: 20px;
+        }
+        
+        .insight-item {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .insight-icon {
+            align-self: flex-start;
+        }
+        
+        .change-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .change-header i {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .results-header h3 {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        
+        .results-subtitle {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .iteration-highlights,
+        .key-change,
+        .playtesting-results {
+            padding: 20px 15px;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">ANACRUSA</div>
+                <p>Un proyecto de YiliLemon - Desarrollo de productos de entretenimiento digital</p>
+                
+                <div class="footer-links">
+                    <a href="#concepto">Concepto</a>
+                    <a href="#diseno">Diseño</a>
+                    <a href="#programacion">Programación</a>
+                    <a href="#narrativa">Narrativa</a>
+                    <a href="#artistica">Arte</a>
+                    <a href="#ilustracion">Ilustración</a>
+                    <a href="#ui">UI/UX</a>
+                    <a href="#pruebas">Pruebas</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2023 YiliLemon. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú móvil toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace (en móviles)
+        document.querySelectorAll('.nav-menu a').forEach(item => {
+            item.addEventListener('click', function() {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+        
+        // Efecto de cambio de color del header al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(33, 32, 32, 0.98)';
+            } else {
+                header.style.backgroundColor = 'rgba(33, 32, 32, 0.95)';
+            }
+        });
+
+
+            // Script mejorado para manejar las ventanas modales
+    document.addEventListener('DOMContentLoaded', function() {
+        // Variables para las modales
+        const modalBtns = document.querySelectorAll('.modal-btn');
+        const modals = document.querySelectorAll('.modal');
+        const closeBtns = document.querySelectorAll('.modal-close');
+        
+        // Abrir modal al hacer clic en botón
+        modalBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    // Enfocar el botón de cerrar para accesibilidad
+                    setTimeout(() => {
+                        const closeBtn = modal.querySelector('.modal-close');
+                        if (closeBtn) closeBtn.focus();
+                    }, 100);
+                }
+            });
+        });
+        
+        // Cerrar modal con el botón X
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                closeModal(this.closest('.modal'));
+            });
+        });
+        
+        // Cerrar modal haciendo clic fuera del contenido
+        modals.forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal(this);
+                }
+            });
+        });
+        
+        // Cerrar modal con la tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modals.forEach(modal => {
+                    if (modal.classList.contains('active')) {
+                        closeModal(modal);
+                    }
+                });
+            }
+        });
+        
+        // Función para cerrar modal
+        function closeModal(modal) {
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                
+                // Enfocar el botón que abrió la modal
+                const activeBtn = document.querySelector(`.modal-btn[data-modal="${modal.id}"]`);
+                if (activeBtn) {
+                    setTimeout(() => activeBtn.focus(), 100);
+                }
+            }
+        }
+        
+        // Prevenir que los clics dentro del contenido cierren la modal
+        document.querySelectorAll('.modal-content').forEach(content => {
+            content.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    });
+
+        // Script para alternar entre diagramas
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButtons = document.querySelectorAll('.toggle-btn');
+        const diagramVersions = document.querySelectorAll('.diagram-version');
+        
+        toggleButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetDiagram = this.getAttribute('data-diagram');
+                
+                // Remover clase active de todos los botones
+                toggleButtons.forEach(b => b.classList.remove('active'));
+                // Añadir clase active al botón clickeado
+                this.classList.add('active');
+                
+                // Ocultar todos los diagramas
+                diagramVersions.forEach(diagram => {
+                    diagram.classList.remove('active');
+                });
+                
+                // Mostrar el diagrama objetivo
+                const targetElement = document.getElementById(`diagram-${targetDiagram}`);
+                if (targetElement) {
+                    targetElement.classList.add('active');
+                }
+            });
+        });
+        
+        // Inicializar con la versión detallada visible
+        document.getElementById('diagram-detailed').classList.add('active');
+    });
+
+        // Script para los diagramas del personaje
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleccionamos solo los botones dentro del contenedor de personaje
+        const charToggleButtons = document.querySelectorAll('.character-diagram .toggle-btn');
+        const charDiagramVersions = document.querySelectorAll('.character-diagram .diagram-version');
+        
+        charToggleButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetDiagram = this.getAttribute('data-diagram');
+                
+                // Remover clase active de todos los botones en este contenedor
+                charToggleButtons.forEach(b => b.classList.remove('active'));
+                // Añadir clase active al botón clickeado
+                this.classList.add('active');
+                
+                // Ocultar todos los diagramas en este contenedor
+                charDiagramVersions.forEach(diagram => {
+                    diagram.classList.remove('active');
+                });
+                
+                // Mostrar el diagrama objetivo
+                const targetElement = document.getElementById(`diagram-${targetDiagram}`);
+                if (targetElement) {
+                    targetElement.classList.add('active');
+                }
+            });
+        });
+        
+        // Inicializar con el primer diagrama visible
+        document.querySelector('.character-diagram .diagram-version').classList.add('active');
+    });
+
+    // Agrega esto al script existente de la página
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleccionar el botón de colapso
+        const collapseToggle = document.querySelector('.collapse-toggle');
+        if (collapseToggle) {
+            const collapsibleDiagrams = document.querySelector('.collapsible-diagrams');
+            const collapseIcon = collapseToggle.querySelector('.collapse-icon');
+
+            collapseToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                
+                if (isExpanded) {
+                    // Ocultar
+                    collapsibleDiagrams.style.display = 'none';
+                    collapseIcon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Mostrar
+                    collapsibleDiagrams.style.display = 'block';
+                    collapseIcon.style.transform = 'rotate(90deg)';
+                }
+            });
+
+            // Por defecto, está plegado, así que no hacemos nada más.
+            // Pero si quisiéramos que esté desplegado por defecto, cambiaríamos:
+            // this.setAttribute('aria-expanded', 'true');
+            // collapsibleDiagrams.style.display = 'block';
+            // collapseIcon.style.transform = 'rotate(90deg)';
+        }
+    });
+
+     // Script para el carrusel de personajes
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselTrack = document.querySelector('.carousel-track');
+        const characterCards = document.querySelectorAll('.character-card');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const indicators = document.querySelectorAll('.indicator');
+        const carouselContainer = document.querySelector('.carousel-container');
+        
+        let currentIndex = 0;
+        let cardWidth = 0;
+        let isDragging = false;
+        let startPosX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID = 0;
+        
+        // Inicializar carrusel
+        function initCarousel() {
+            if (characterCards.length === 0) return;
+            
+            // Calcular ancho de tarjeta
+            cardWidth = characterCards[0].offsetWidth;
+            
+            // Establecer posición inicial
+            updateCarouselPosition();
+            updateActiveCard();
+        }
+        
+        // Actualizar posición del carrusel
+        function updateCarouselPosition() {
+            const translateX = -currentIndex * cardWidth;
+            carouselTrack.style.transform = `translateX(${translateX}px)`;
+        }
+        
+        // Actualizar tarjeta activa
+        function updateActiveCard() {
+            // Remover clase active de todas las tarjetas
+            characterCards.forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            // Añadir clase active a la tarjeta actual
+            if (characterCards[currentIndex]) {
+                characterCards[currentIndex].classList.add('active');
+            }
+            
+            // Actualizar indicadores
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        // Ir a tarjeta específica
+        function goToCard(index) {
+            // Asegurar que el índice esté dentro de los límites
+            if (index < 0) {
+                currentIndex = characterCards.length - 1;
+            } else if (index >= characterCards.length) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            
+            updateCarouselPosition();
+            updateActiveCard();
+        }
+        
+        // Siguiente tarjeta
+        function nextCard() {
+            goToCard(currentIndex + 1);
+        }
+        
+        // Tarjeta anterior
+        function prevCard() {
+            goToCard(currentIndex - 1);
+        }
+        
+        // Funciones para arrastre
+        function startDrag(e) {
+            isDragging = true;
+            startPosX = getPositionX(e);
+            prevTranslate = currentTranslate;
+            
+            carouselContainer.classList.add('dragging');
+            
+            // Cancelar animación si hay una en curso
+            cancelAnimationFrame(animationID);
+        }
+        
+        function drag(e) {
+            if (!isDragging) return;
+            
+            const currentPosition = getPositionX(e);
+            currentTranslate = prevTranslate + currentPosition - startPosX;
+            
+            // Actualizar posición visual durante el arrastre
+            animationID = requestAnimationFrame(() => {
+                carouselTrack.style.transform = `translateX(${currentTranslate}px)`;
+            });
+        }
+        
+        function endDrag() {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            carouselContainer.classList.remove('dragging');
+            
+            cancelAnimationFrame(animationID);
+            
+            // Determinar si el arrastre fue suficiente para cambiar de tarjeta
+            const movedBy = currentTranslate - prevTranslate;
+            
+            if (Math.abs(movedBy) > cardWidth / 4) {
+                if (movedBy < 0) {
+                    // Arrastre hacia la izquierda = siguiente
+                    nextCard();
+                } else {
+                    // Arrastre hacia la derecha = anterior
+                    prevCard();
+                }
+            } else {
+                // Volver a la posición actual
+                updateCarouselPosition();
+            }
+        }
+        
+        function getPositionX(e) {
+            return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        }
+        
+        // Event Listeners
+        prevBtn.addEventListener('click', prevCard);
+        nextBtn.addEventListener('click', nextCard);
+        
+        // Event Listeners para indicadores
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                goToCard(index);
+            });
+        });
+        
+        // Event Listeners para arrastre en dispositivos táctiles
+        carouselContainer.addEventListener('mousedown', startDrag);
+        carouselContainer.addEventListener('touchstart', startDrag);
+        
+        carouselContainer.addEventListener('mousemove', drag);
+        carouselContainer.addEventListener('touchmove', drag);
+        
+        carouselContainer.addEventListener('mouseup', endDrag);
+        carouselContainer.addEventListener('touchend', endDrag);
+        carouselContainer.addEventListener('mouseleave', endDrag);
+        
+        // Prevenir comportamiento predeterminado de arrastre de imágenes
+        carouselContainer.addEventListener('dragstart', e => e.preventDefault());
+        
+        // Inicializar cuando se cargue la ventana
+        window.addEventListener('load', initCarousel);
+        window.addEventListener('resize', initCarousel);
+        
+        // Auto-avance opcional (descomentar si quieres que avance automáticamente)
+        // let autoSlideInterval = setInterval(nextCard, 5000);
+        
+        // Pausar auto-avance al interactuar
+        // carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        // carouselContainer.addEventListener('mouseleave', () => {
+        //     autoSlideInterval = setInterval(nextCard, 5000);
+        // });
+    });
+
+	// Script para el carrusel de assets
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const currentSlideEl = document.querySelector('.current-slide');
+        const totalSlidesEl = document.querySelector('.total-slides');
+        
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        
+        // Establecer total de slides
+        totalSlidesEl.textContent = totalSlides;
+        
+        // Función para mostrar un slide específico
+        function showSlide(index) {
+            // Asegurar que el índice esté dentro de los límites
+            if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+            
+            // Ocultar todos los slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Mostrar el slide actual
+            slides[currentIndex].classList.add('active');
+            
+            // Actualizar indicadores
+            indicators.forEach(indicator => {
+                indicator.classList.remove('active');
+            });
+            indicators[currentIndex].classList.add('active');
+            
+            // Actualizar contador
+            currentSlideEl.textContent = currentIndex + 1;
+        }
+        
+        // Event listeners para los botones de navegación
+        prevBtn.addEventListener('click', function() {
+            showSlide(currentIndex - 1);
+        });
+        
+        nextBtn.addEventListener('click', function() {
+            showSlide(currentIndex + 1);
+        });
+        
+        // Event listeners para los indicadores
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                showSlide(index);
+            });
+        });
+        
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                showSlide(currentIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+                showSlide(currentIndex + 1);
+            }
+        });
+        
+        // Auto-avance opcional (descomentar si lo quieres)
+        /*
+        let autoSlideInterval = setInterval(function() {
+            showSlide(currentIndex + 1);
+        }, 5000);
+        
+        // Pausar auto-avance al interactuar
+        const carousel = document.querySelector('.assets-carousel');
+        carousel.addEventListener('mouseenter', function() {
+            clearInterval(autoSlideInterval);
+        });
+        
+        carousel.addEventListener('mouseleave', function() {
+            autoSlideInterval = setInterval(function() {
+                showSlide(currentIndex + 1);
+            }, 5000);
+        });
+        */
+        
+        // Inicializar el carrusel
+        showSlide(0);
+    });
+    </script>
+</body>
+</html>
